@@ -8,7 +8,11 @@ tags: [test]
 comments: true
 ---
 
-You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+How to start using Anaconda for AI processes
+
+Well, it works on your command line interface such as Anaconda prompt on Windows. In this occasion, we will go on windows for our exercise purposes.
+
+In our case we will first state that we can use the Anaconda Navigator to get into the Spyder IDE or the Jupyter notebook to wirte a python program an execute. There are differences between both of them. On the other hand, we also can use the Anaconda prompt where we type python and the >>> means that we already are on python (to exit press Ctrl+z and Enter). Finally we can launch spyder or Jupyter from command line with Anaconda prompt. All of this is made in Windows. In this case, in particular, I will choose Jupyter Notebooks since they are powerful way to write and iterate on Python code for data analysis. I mean you are able to write lines of c ode and run them one at a time. A short-key we can use in Jupyter-Notebook is the Shift-Enter to run one line. Said all this, I think we can go into the python code to start creating out SVM python code.
 
 **Here is some bold text**
 
