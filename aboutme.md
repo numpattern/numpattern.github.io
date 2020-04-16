@@ -1,16 +1,24 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: A little more in relation to me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Harold Velasquez. I have the following qualities:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- I have a B.Sc. in Geological Engineering from Peru
+- I definitevely enjoy going out to:
+ * Camping
+ * Jogging
+ * Surfing
+ * Traveling
+ * Gym 
+ * Drinking a cold beer when it's hot out there  
+ 
+ I mean not in that priority order because I love all of them
 
-What else do you need?
+What else do you need to know about me?
 
-### my history
+_My history_
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Honestly, I am a guy who loves to study so much all fields related to mathematics and programming. 
