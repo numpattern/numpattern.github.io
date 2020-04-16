@@ -9,12 +9,12 @@
 
 facebook:
   name: "Facebook"
-  urlTemplate: "https://www.facebook.com/{value}"
+  urlTemplate: "https://www.facebook.com/G.harold.velasquezsanchez"
   icon: "fab fa-facebook"
 
 github:
   name: "GitHub"
-  urlTemplate: "https://github.com/{value}"
+  urlTemplate: "https://github.com/haroldvelasquez/"
   icon: "fab fa-github"
 
 twitter:
@@ -34,7 +34,7 @@ email:
 
 linkedin:
   name: "LinkedIn"
-  urlTemplate: "https://linkedin.com/in/{value}"
+  urlTemplate: "https://www.linkedin.com/in/haroldvelasquez91/"
   icon: "fab fa-linkedin"
 
 xing:
@@ -69,7 +69,7 @@ spotify:
 
 telephone:
   name: "Phone"
-  urlTemplate: "tel:{value}"
+  urlTemplate: "tel:993906661"
   icon: "fas fa-phone"
 
 rss:
