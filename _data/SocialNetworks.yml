@@ -19,7 +19,7 @@ github:
 
 twitter:
   name: "Twitter"
-  urlTemplate: "https://twitter.com/{value}"
+  urlTemplate: "https://twitter.com/harovelasquez91"
   icon: "fab fa-twitter"
 
 reddit:
