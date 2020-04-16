@@ -2,6 +2,7 @@
 layout: page
 title: About me
 subtitle: A little more in relation to me
+bigimg: /img/per002rz.jpg
 ---
 
 My name is Harold Velasquez. I have the following qualities:
@@ -15,7 +16,7 @@ My name is Harold Velasquez. I have the following qualities:
  * Gym 
  * Drinking a cold beer when it's hot out there  
  
- I mean not in that priority order because I love all of them
+ I mean not in that priority order because I love all of them. I am always opened to share experiences and try new things.
 
 What else do you need to know about me?
 
