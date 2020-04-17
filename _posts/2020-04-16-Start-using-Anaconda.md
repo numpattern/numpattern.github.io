@@ -28,7 +28,7 @@ Here's a useless table:
 
 How about a yummy crepe?
 
-![Crepe](https://github.com/haroldvelasquez/haroldvelasquez.github.io/blob/master/img/avatar-icon.png)
+![brot](https://github.com/haroldvelasquez/haroldvelasquez.github.io/blob/master/img/avatar-icon.png?raw=true)
 
 It can also be centered!
 
