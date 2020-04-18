@@ -34,7 +34,7 @@ import pandas as pd
 df = geopandas.read_file(geopandas.datasets.get_path('nybb'))
 ax = df.plot(figsize=(10,10), alpha=0.5, edgecolor='k')
 ~~~
-![Result](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
+![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/gdp_plot.png){: .center-block :}
 
 
 Ok, It resulted well. I will be updating this post for other types of Data, as I look for a Dataset that fits with our next analysis. If you have questions regarding this post, feel free to contact me so I can help you.
