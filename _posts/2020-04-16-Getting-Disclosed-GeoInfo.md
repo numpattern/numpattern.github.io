@@ -38,3 +38,11 @@ ax = df.plot(figsize=(10,10), alpha=0.5, edgecolor='k')
 
 
 Ok, It resulted well. I will be updating this post for other types of Data, as I look for a Dataset that fits with our next analysis. If you have questions regarding this post, feel free to contact me so I can help you.
+
+Next what we want to try is the package _contextily_ which is a wonderful tool to retrieve tile maps from the Internet and embed it in our shapes. I really suggest that if you want to use geopandas and contextily you preferably create a new empty conda environment with a 3.7 python version. Then you install the _contextily_ package with conda-forge channel, geopandas and **pip install descartes**. I must mention that I tried installing the _contextily_ package into my 3.8 python with a CUDA 10.2 driver installed and I experienced lots of problems.
+
+Below I show the results of using _contextily_ package
+
+![Contextily](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
+
+
