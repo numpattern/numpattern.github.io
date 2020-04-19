@@ -25,23 +25,23 @@ Now we will see first how to import _.dbf_ files. The dBASE table (.dbf) file is
 At this point I realized that we need to use a library to import this kind of data, we will use geopandas library which you can find [here](https://geopandas.org/). There you will find all the documentation in order to install it. I suggest that you previously you have Anaconda installed and you better use _conda_ instead of _pip_, and preferably on created new empty environment inside your Anaconda.
 
 The next code is a good choice to run inside your Anaconda Prompt, although _conda install geopandas_ worked well for me
-~~~
+```python
 conda create -n geo_env
 conda activate geo_env
 conda config --env --add channels conda-forge
 conda config --env --set channel_priority strict
 conda install python=3 geopandas
-~~~
+```
 
 In my case, after installation, I also needed the _descartes_ package so I googled it and installed.
 
 So, in your Anaconda notebook you can run the following code
-~~~
+```python
 import geopandas
 import pandas as pd
 df = geopandas.read_file(geopandas.datasets.get_path('nybb'))
 ax = df.plot(figsize=(10,10), alpha=0.5, edgecolor='k')
-~~~
+```
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/gdp_plot.png){: .center-block :}
 
 ### What else we can you with geopandas
@@ -70,17 +70,17 @@ when I first tried the next code, I obtained a empty list, so that noticed me th
 
 32-32 and 64-64
 
-~~~
+```python #Alt96 for back ticks
 import pyodbc
 [x for x in pyodbc.drivers() if x.startswith('Microsoft Access Driver')]
-~~~
+```
 
 After a lot of problems trying to why I got the error _General error Unable to open registry key Temporary (volatile) …” from Access ODBC_ This question saved my life 
 [Solve Error](https://stackoverflow.com/questions/26244425/general-error-unable-to-open-registry-key-temporary-volatile-from-access). It is preferably to verify user permissions to specified path.
 
 Let's try the read_sql function from pandas. It is easier than use the old cursor (for Dataframes purpose)
 
-~~~
+```python
 import pyodbc
 import pandas as pd
 conn_str = (
@@ -93,6 +93,6 @@ SQL='SELECT * FROM GSITEASSAY'
 df = pd.read_sql(SQL, conn)
 
 conn.close()
-~~~
+```
 
 ![Dataframe](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/post002_dataframe.PNG){: .center-block :}
