@@ -6,4 +6,4 @@ bigimg: /img/per009rz.jpg
 tags: [books, test]
 ---
 
-Upcoming posts soon
+- EDA

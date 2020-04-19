@@ -3,7 +3,7 @@ layout: post
 title: How can we get Disclosed Geo-scientific Data from Geological Organizations
 subtitle: From Beginning
 bigimg: /img/per009rz.jpg
-tags: [Database, GIS, geopandas]
+tags: [Database, GIS, geopandas, Access]
 ---
 
 ## Getting Data we can work with
@@ -90,3 +90,8 @@ conn.close()
 ```
 
 ![Dataframe](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/post002_dataframe.PNG){: .center-block :}
+
+
+If you have some dataformat you would like to know how to handle, comment me!
+
+Bye
