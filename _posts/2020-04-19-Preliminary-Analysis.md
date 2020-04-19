@@ -13,8 +13,10 @@ In this post we will use the information that we extracted from the **Getting Di
 df_quantVal = df['quantVal'].astype('float64')
 df_quantVal.describe()
 ```
-| Statistics | Value |
-| --- |:---:|
+
+---|---
+ Statistics | Value 
+ --- | --- 
 count |   672587.000000
 mean   |     144.849423
 std     |   2628.235571
@@ -38,6 +40,8 @@ df1 = df.astype(dtype_dict)
 df1.dtypes
 ```
 
+
+---|---
 Column name  | Data type
 --- | ---
 siteId   |         int64
@@ -55,9 +59,29 @@ unitbdlFlag     |  object
 maxValue         |  int64
 minValue          | int64
 
+Let's take a first sight of our Gold data be means of histogram and cumulative histogram
 
 ```python
+import matplotlib.pyplot as plt
+import numpy as np
 
+
+plt.subplot(121)
+plt.hist(df1['quantVal'], facecolor='red', histtype='step', bins=np.linspace(0,100,50),alpha=1,density=False,edgecolor='black',label='Gold')
+plt.xlim([0,100]); 
+#plt.ylim([0,])
+plt.xlabel('Porosity (fraction)'); plt.ylabel('Frequency'); plt.title('Porosity Well 1 and 2')
+plt.legend(loc='upper left')
+plt.grid(True)
+
+plt.subplot(122)
+plt.hist(df1['quantVal'], facecolor='green',histtype='stepfilled', cumulative=True,bins=np.linspace(0,100,50), alpha=0.7, density=True,edgecolor='black',label='Gold')
+plt.xlim([0,100])
+plt.legend(loc='upper left')
+plt.grid(True)
+
+plt.subplots_adjust(left=0.0, bottom=0.0, right=2.0, top=1.2, wspace=0.2, hspace=0.3)
+plt.show()
 ```
 
 ```python
