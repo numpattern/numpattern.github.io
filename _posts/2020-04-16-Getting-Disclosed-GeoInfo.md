@@ -95,3 +95,7 @@ conn.close()
 If you have some dataformat you would like to know how to handle, comment me!
 
 Bye
+
+https://pbpython.com/pandas_dtypes.html
+
+Use this link to follow instructions how to deal with non clean database from scratch regarding al dtypes on your dataframe.
