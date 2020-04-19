@@ -15,8 +15,8 @@ df_quantVal.describe()
 ```
 
 ---|---
- Statistics | Value 
- --- | --- 
+Statistics | Value 
+--- | --- 
 count |   672587.000000
 mean   |     144.849423
 std     |   2628.235571
@@ -42,9 +42,9 @@ df1.dtypes
 
 
 ---|---
-Column name  | Data type
+Column name | Data type
 --- | ---
-siteId   |         int64
+siteId | int64
 id        |         int64
 gcSampleId |        int64
 quantVal    |     float64
