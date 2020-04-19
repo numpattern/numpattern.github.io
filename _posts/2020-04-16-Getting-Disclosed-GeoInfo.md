@@ -13,7 +13,12 @@ As we need geological informations in all its types and sizes for our further an
 - [Victoria State Government - Earth Resources publications](http://earthresources.efirst.com.au/product.asp?pID=1016&cID=12)
 - [USGS GeoSpatial Datasets](https://mrdata.usgs.gov/catalog/science.php?thcode=2&term=474)
 
-But these Datasets come in a wide range of Dataformats (e.g GIS Data, big data, binary and so on) so we ought to be able to handle ever type of data that exist. Now we will see first how to import _.dbf_ files. The dBASE table (.dbf) file is one of the three files required for a valid ESRI Shapefile.
+But these Datasets come in a wide range of Dataformats (e.g GIS Data, big data, binary and so on) so we ought to be able to handle ever type of data that exist. 
+
+I downloaded files from each of the links listed and the datafiles I found was .dbf and .mdb databases. I will continue to add different kind  of formats and how to handle this data in order to getting further analysis.
+
+##Opening .dbf files into python using geopandas
+
 Now we will see first how to import _.dbf_ files. The dBASE table (.dbf) file is one of the three files required for a valid ESRI Shapefile.
 
 At this point I realized that we need to use a library to import this kind of data, we will use geopandas library which you can find [here](https://geopandas.org/). There you will find all the documentation in order to install it. I suggest that you previously you have Anaconda installed and you better use _conda_ instead of _pip_, and preferably on created new empty environment inside your Anaconda.
