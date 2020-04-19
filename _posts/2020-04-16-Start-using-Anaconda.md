@@ -14,10 +14,6 @@ In our case we will first state that we can use the Anaconda Navigator to get in
 
 **Here is some bold text**
 
-## Here is a secondary heading
-
-Here's a useless table:
-
 | Number | Next number | Previous number |
 | :------ |:--- | :--- |
 | Five | Six | Four |
@@ -26,13 +22,7 @@ Here's a useless table:
 | Two | Three | One |
 
 
-How about a yummy crepe?
-
 ![brot](https://github.com/haroldvelasquez/haroldvelasquez.github.io/blob/master/img/avatar-icon.png?raw=true)
-
-It can also be centered!
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
 
 Here's a code chunk:
 
