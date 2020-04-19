@@ -51,7 +51,7 @@ ax = df.plot(figsize=(10,10), alpha=0.5, edgecolor='k')
 
 Below I show the results of using _contextily_ package
 
-![Contextily](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
+![Contextily](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Contextily.PNG){: .center-block :}
 
 
 **Wait for more posts!**
@@ -91,3 +91,5 @@ df = pd.read_sql(SQL, conn)
 
 conn.close()
 ~~~
+
+![Dataframe](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/post002_dataframe.PNG){: .center-block :}
