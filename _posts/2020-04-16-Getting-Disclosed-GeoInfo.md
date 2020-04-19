@@ -63,7 +63,7 @@ I strongly recommend the next link to give you an insight of what we need to set
 
 When I first tried the next code, I obtained a empty list which meant that I lacked of the Access Database Driver on my machine, even when I had the Office installed. Recall that it is important to know what is the _bit version_ of your Office and your Python. they have to be the same. In my case, it was 64bits Office and 64bits Python.
 
-```python #Alt96 for back ticks
+```python
 import pyodbc
 [x for x in pyodbc.drivers() if x.startswith('Microsoft Access Driver')]
 ```
