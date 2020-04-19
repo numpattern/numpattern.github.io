@@ -17,7 +17,8 @@ But these Datasets come in a wide range of Dataformats (e.g GIS Data, big data, 
 
 I downloaded files from each of the links listed and the datafiles I found was .dbf and .mdb databases. I will continue to add different kind  of formats and how to handle this data in order to getting further analysis.
 
-##Opening .dbf files into python using geopandas
+## Opening .dbf files into python using geopandas
+======
 
 Now we will see first how to import _.dbf_ files. The dBASE table (.dbf) file is one of the three files required for a valid ESRI Shapefile.
 
@@ -43,7 +44,8 @@ ax = df.plot(figsize=(10,10), alpha=0.5, edgecolor='k')
 ~~~
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/gdp_plot.png){: .center-block :}
 
-###What else we can you with geopandas
+### What else we can you with geopandas
+======
 
 - Ok, It resulted well. I will be updating this post for other types of Data, as I look for a Dataset that fits with our next analysis. If you have questions regarding this post, feel free to contact me so I can help you.
 
@@ -57,7 +59,8 @@ Below I show the results of using _contextily_ package
 **Wait for more posts!**
 
 
-###Opening Micrsoft Access Database files 
+### Opening Micrsoft Access Database files
+======
 
 I strongly recommend the link below to give you an insight of what we need strart our connection.
 
