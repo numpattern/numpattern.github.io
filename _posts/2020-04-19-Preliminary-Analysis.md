@@ -14,16 +14,17 @@ df_quantVal = df['quantVal'].astype('float64')
 df_quantVal.describe()
 ```
 
+| --- | --- |
 | Statistics | Value |
 | --- | --- |
-count |   672587.000000
-mean   |     144.849423
-std     |   2628.235571
-min      |     0.000100
-25%       |    4.600000
-50%      |    18.000000
-75%          52.900002
-max     | 710000.000000
+| count |   672587|
+| mean  |     144.84 |
+| std   |   2628.23 |
+| min   |     0.0001 |
+| 25%   |    4.60 |
+| 50%   |    18.00 |
+| 75%   |       52.90 |
+| max   | 710000.00 |
 
 We know forehead that there are some columns that hold wrong data types due to the interpretation that pandas gave to them. Prior further analysis we must ensure that out data types are correct. Re-assigning data types would be faster and in fact  every operation would be faster in a numpy array but so far let's do it with a Dataframe.
 
