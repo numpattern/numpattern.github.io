@@ -2,7 +2,7 @@
 layout: post
 title: Preliminary Data Analysis
 subtitle: Histograms and Boxplots
-tags: [EDA,Statistics]
+tags: [EDA,Statistics, ]
 ---
 
 ##Analyzing Tabular Data
@@ -13,18 +13,6 @@ In this post we will use the information that we extracted from the **Getting Di
 df_quantVal = df['quantVal'].astype('float64')
 df_quantVal.describe()
 ```
-
-| --- | --- |
-| Statistics | Value |
-| --- | --- |
-| count |   672587|
-| mean  |     144.84 |
-| std   |   2628.23 |
-| min   |     0.0001 |
-| 25%   |    4.60 |
-| 50%   |    18.00 |
-| 75%   |       52.90 |
-| max   | 710000.00 |
 
 We know forehead that there are some columns that hold wrong data types due to the interpretation that pandas gave to them. Prior further analysis we must ensure that out data types are correct. Re-assigning data types would be faster and in fact  every operation would be faster in a numpy array but so far let's do it with a Dataframe.
 
@@ -39,7 +27,6 @@ dtype_dict["quantVal"] = 'float' #additional changes to the original data types
 df1 = df.astype(dtype_dict)
 df1.dtypes
 ```
-
 
 ---|---
 Column name | Data type
@@ -59,35 +46,72 @@ unitbdlFlag     |  object
 maxValue         |  int64
 minValue          | int64
 
-Let's take a first sight of our Gold data be means of histogram and cumulative histogram
+We now can evaluate de resulted statistics from the _quantVal_ column. At first glance, we have minimum values  as 0.0001 and maximun as 710 000, and the Q3 is 52.9 so It seems from the description below that we have outliers.
+
+| --- | --- |
+| Statistics | Value |
+| --- | --- |
+| count |   672587|
+| mean  |     144.84 |
+| std   |   2628.23 |
+| min   |     0.0001 |
+| 25%   |    4.60 |
+| 50%   |    18.00 |
+| 75%   |       52.90 |
+| max   | 710000.00 |
+
+
+Let's take a first sight of our Gold data be means of histogram of the original values, cumulative distribution of the ln of the values and histogram of the ln of the original values
 
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-plt.subplot(121)
-plt.hist(df1['quantVal'], facecolor='red', histtype='step', bins=np.linspace(0,100,50),alpha=1,density=False,edgecolor='black',label='Gold')
-plt.xlim([0,100]); 
-#plt.ylim([0,])
+plt.subplot(221)
+plt.hist(df1['quantVal'], facecolor='red', bins=np.linspace(0,100,100),alpha=1,density=True,edgecolor='black',label='Gold')
 plt.xlabel('Porosity (fraction)'); plt.ylabel('Frequency'); plt.title('Porosity Well 1 and 2')
 plt.legend(loc='upper left')
 plt.grid(True)
 
-plt.subplot(122)
-plt.hist(df1['quantVal'], facecolor='green',histtype='stepfilled', cumulative=True,bins=np.linspace(0,100,50), alpha=0.7, density=True,edgecolor='black',label='Gold')
-plt.xlim([0,100])
+plt.subplot(222)
+plt.hist(df1['quantVal'], facecolor='red',histtype='stepfilled', cumulative=True,bins=np.linspace(0,20,100), alpha=0.3, density=True,edgecolor='black',label='Gold')
 plt.legend(loc='upper left')
 plt.grid(True)
 
-plt.subplots_adjust(left=0.0, bottom=0.0, right=2.0, top=1.2, wspace=0.2, hspace=0.3)
+plt.subplot(223)
+plt.hist(df1['loggs'], facecolor='red', bins=np.linspace(-7.5,7.5,100),alpha=1,density=True,edgecolor='black',label='Gold')
+plt.xlabel('Porosity (fraction)'); plt.ylabel('Frequency'); plt.title('Porosity Well 1 and 2')
+plt.legend(loc='upper left')
+plt.grid(True)
+
+plt.subplots_adjust(left=1.0, right=3.0, wspace=0.2, hspace=0.5)
+plt.show()
+```
+
+![Histograms](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Contextily.PNG){: .center-block :}
+
+By means of a boxplot we will get an insight of the distributions of all the Data we have in our Categorical Datatable with values.
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.set(style="ticks", color_codes=True)
+sns.set_context("paper")
+
+dims = (11.7,25) #in inches
+fig, ax = plt.subplots(figsize=dims)
+
+df2["log2"]=np.log(df2["quantVal"])
+#colors = ["windows blue", "amber", "greyish", "faded green"]
+#a = sns.palplot(sns.xkcd_palette(6))
+sns.boxplot(x="quantVal",y="quantType",ax=ax,data=df2)
+#sns.boxplot(x="day", y="total_bill",hue="day",data=tips, ax=g.ax, palette="ch:.25")
+
+plt.xscale('log')
+plt.savefig('book.jpg')
 plt.show()
 ```
 
 ```python
-
-```
-
-```python
-
+![Boxplotfig](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Contextily.PNG){: .center-block :}
 ```
