@@ -14,9 +14,8 @@ df_quantVal = df['quantVal'].astype('float64')
 df_quantVal.describe()
 ```
 
----|---
-Statistics | Value 
---- | --- 
+| Statistics | Value |
+| --- | --- |
 count |   672587.000000
 mean   |     144.849423
 std     |   2628.235571
