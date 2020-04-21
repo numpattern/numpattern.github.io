@@ -88,7 +88,7 @@ plt.subplots_adjust(left=1.0, right=3.0, wspace=0.2, hspace=0.5)
 plt.show()
 ```
 
-![Histograms](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Contextily.PNG){: .center-block :}
+![Histograms](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/histogram.PNG){: .center-block :}
 
 By means of a boxplot we will get an insight of the distributions of all the Data we have in our Categorical Datatable with values.
 
@@ -112,6 +112,9 @@ plt.savefig('book.jpg')
 plt.show()
 ```
 
-```python
-![Boxplotfig](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Contextily.PNG){: .center-block :}
-```
+
+![Boxplotfig](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/boxplot.PNG){: .center-block :}
+
+
+_if there is a high number of values below detection (<25%) there is no chance that this data will approach a normal or lognormal distribution_ [Riemman,1999](https://link.springer.com/article/10.1007/s002549900081)
+
