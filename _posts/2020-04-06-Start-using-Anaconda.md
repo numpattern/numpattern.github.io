@@ -4,7 +4,8 @@ title: How to start using Anaconda
 subtitle: First steps from zero
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-tags: [Anaconda, notebook]
+bigimg: /img/bigdataspace.jpg
+tags: [Anaconda, notebook, jupyter]
 comments: true
 ---
 

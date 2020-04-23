@@ -9,3 +9,9 @@ tags: [books, test]
 - EDA
 - Bootstrap technique
 - Declustering
+
+
+Regards
+
+_Harold G. Velasquez_
+

@@ -8,15 +8,7 @@ bigimg: /img/per002rz.jpg
 My name is Harold Velasquez. I have the following qualities:
 
 - I have a B.Sc. in Geological Engineering from Peru
-- I definitevely enjoy going out to:
- * Camping
- * Jogging
- * Surfing
- * Traveling
- * Gym 
- * Drinking a cold beer when it's hot out there  
- 
- I mean not in that priority order because I love all of them. I am always opened to share experiences and try new things.
+- I definitevely enjoy going out to _camping, jogging, surfing, traveling, gym and drinking a good cold beer when it's hot out there_ . I mean not in that priority order because I love all of them. I am always opened to share experiences and try new things.
 
 What else do you need to know about me?
 
