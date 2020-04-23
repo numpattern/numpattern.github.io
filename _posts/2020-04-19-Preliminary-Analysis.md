@@ -118,3 +118,8 @@ plt.show()
 
 _if there is a high number of values below detection (<25%) there is no chance that this data will approach a normal or lognormal distribution_ [Riemman,1999](https://link.springer.com/article/10.1007/s002549900081)
 
+
+
+
+test for normality
+[test for normalilty](https://machinelearningmastery.com/a-gentle-introduction-to-normality-tests-in-python/)
