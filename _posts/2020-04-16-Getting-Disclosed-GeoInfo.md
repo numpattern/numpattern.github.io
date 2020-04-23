@@ -38,13 +38,13 @@ In my case, after installation, I also needed the _descartes_ package. So it may
 
 ```python
 import geopandas
-df = geopandas.read_file('yourfile')
+df = geopandas.read_file('WaterLab.dbf')
 df.head() #to show the first rows in our geopandas DataFrame
 ```
 
 The geopandas table is different from a regular DataFrame, because it contains the column named _geometry_ where all the shapes are stored. In our case, we did not find data in our geometry object. See image below.
 
-![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/gdp_plot.png){: .center-block :}
+![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Geopandas_table.PNG){: .center-block :}
 
 
 ### What else we can you with geopandas
@@ -61,7 +61,7 @@ ax = df.plot(figsize=(10,10), alpha=0.5, edgecolor='k')
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/gdp_plot.png){: .center-block :}
 
 
-- Next what we want to try is the package _contextily_ which is a wonderful tool to retrieve tile maps from the Internet and embed them in our shapes. I really suggest that if you want to use geopandas and contextily you preferably create a new empty conda environment with a 3.7 python version. Then you install the _contextily_ package with conda-forge channel, geopandas and **pip install descartes**. I must mention that I tried installing the _contextily_ package into my 3.8 python with a CUDA 10.2 driver installed and I experienced lots of problems.
+-Next what we want to try is the package _contextily_ which is a wonderful tool to retrieve tile maps from the Internet and embed them in our shapes. I really suggest that if you want to use geopandas and contextily you preferably create a new empty conda environment with a 3.7 python version. Then you install the _contextily_ package with conda-forge channel, geopandas and **pip install descartes**. I must mention that I tried installing the _contextily_ package into my 3.8 python with a CUDA 10.2 driver installed and I experienced lots of problems.
 
 Below I show the results of using _contextily_ package
 
@@ -92,11 +92,11 @@ import pyodbc
 import pandas as pd
 conn_str = (
     r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};' #Driver for 64 bits mdb
-    r'DBQ=path\to\your\file.mdb;' #Database
+    r'DBQ=path\to\your\file\Geochemistry.mdb;' #Database
     )
 conn = pyodbc.connect(conn_str)
 
-SQL='your sql statement'
+SQL='SELECT * FROM GSITEASSAY'
 df = pd.read_sql(SQL, conn)
 
 conn.close()
@@ -110,4 +110,6 @@ conn.close()
 
 Ok, It resulted well. I will be updating this post for other types of Data, as I look for a Dataset that fits with our next analysis. If you have questions regarding this post, feel free to contact me so I can help you. Also, if you have some dataformats you would like to know how to handle, tell me.
 
-Bests
+Bests,
+
+_Harold G. Velasquez

@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Flake it till you make it
+title: Upcoming posts
 subtitle: Excerpt from Soulshaping by Jeff Brown
 bigimg: /img/per009rz.jpg
 tags: [books, test]
 ---
 
 - EDA
+- Bootstrap technique
+- Declustering

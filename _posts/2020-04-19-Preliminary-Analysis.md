@@ -5,14 +5,17 @@ subtitle: Histograms and Boxplots
 tags: [EDA,Statistics, ]
 ---
 
-##Analyzing Tabular Data
+## Analyzing Tabular Data
 
-In this post we will use the information that we extracted from the **Getting Disclosed GeoInfo** analysing different type of data. In the first example we take the Gold Assay from the Access Database that came from Victoria-Australia.
+what do we understand by tabular data? It means that our data is arranged in In this post we will use the information that we extracted from the **Getting Disclosed GeoInfo** post. We will proceed to analyze different sorts of data. In the first example we take the Gold Assay from the Access Database that came from Victoria-Australia.
 
 ```python
 df_quantVal = df['quantVal'].astype('float64')
 df_quantVal.describe()
 ```
+
+![df_quantVal_Dataframe](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/histogram.PNG){: .center-block :}
+
 
 We know forehead that there are some columns that hold wrong data types due to the interpretation that pandas gave to them. Prior further analysis we must ensure that out data types are correct. Re-assigning data types would be faster and in fact  every operation would be faster in a numpy array but so far let's do it with a Dataframe.
 
@@ -46,7 +49,7 @@ unitbdlFlag     |  object
 maxValue         |  int64
 minValue          | int64
 
-We now can evaluate de resulted statistics from the _quantVal_ column. At first glance, we have minimum values  as 0.0001 and maximun as 710 000, and the Q3 is 52.9 so It seems from the description below that we have outliers.
+We now can evaluate de resulted statistics from the _quantVal_ column. At first glance, we have minimum values as 0.0001 and maximun as 710 000, and the Q3 is 52.9 so It seems from the description below that we have a strongly skewed data.
 
 | --- | --- |
 | Statistics | Value |
@@ -61,7 +64,16 @@ We now can evaluate de resulted statistics from the _quantVal_ column. At first 
 | max   | 710000.00 |
 
 
-Let's take a first sight of our Gold data be means of histogram of the original values, cumulative distribution of the ln of the values and histogram of the ln of the original values
+Let's take a first sight of our _quantVal_ filtered by _quantType_ column = 'Gold', by means of histograms of the original values, cumulative distribution of the log(base e) of the values and histogram of the ln of the original values
+
+```python
+import numpy as np
+
+df1 = df1[['quantVal','quantType']]
+df1 = df1.loc[df1['quantType'] == 'Gold']
+df1['ln_quantVal'] = np.log(df1['quantVal'])
+```
+
 
 ```python
 import matplotlib.pyplot as plt
@@ -69,18 +81,19 @@ import numpy as np
 
 plt.subplot(221)
 plt.hist(df1['quantVal'], facecolor='red', bins=np.linspace(0,100,100),alpha=1,density=True,edgecolor='black',label='Gold')
-plt.xlabel('Porosity (fraction)'); plt.ylabel('Frequency'); plt.title('Porosity Well 1 and 2')
+plt.xlabel('Gold values'); plt.ylabel('Frequency'); plt.title('Gold')
 plt.legend(loc='upper left')
 plt.grid(True)
 
 plt.subplot(222)
 plt.hist(df1['quantVal'], facecolor='red',histtype='stepfilled', cumulative=True,bins=np.linspace(0,20,100), alpha=0.3, density=True,edgecolor='black',label='Gold')
+plt.xlabel('Gold values'); plt.ylabel('Cumulative frequency'); plt.title('Gold Cumulative Distribution')
 plt.legend(loc='upper left')
 plt.grid(True)
 
 plt.subplot(223)
 plt.hist(df1['loggs'], facecolor='red', bins=np.linspace(-7.5,7.5,100),alpha=1,density=True,edgecolor='black',label='Gold')
-plt.xlabel('Porosity (fraction)'); plt.ylabel('Frequency'); plt.title('Porosity Well 1 and 2')
+plt.xlabel('ln(Gold values'); plt.ylabel('Frequency'); plt.title('Gold')
 plt.legend(loc='upper left')
 plt.grid(True)
 
@@ -102,24 +115,21 @@ dims = (11.7,25) #in inches
 fig, ax = plt.subplots(figsize=dims)
 
 df2["log2"]=np.log(df2["quantVal"])
-#colors = ["windows blue", "amber", "greyish", "faded green"]
-#a = sns.palplot(sns.xkcd_palette(6))
 sns.boxplot(x="quantVal",y="quantType",ax=ax,data=df2)
-#sns.boxplot(x="day", y="total_bill",hue="day",data=tips, ax=g.ax, palette="ch:.25")
 
+plt.xlabel('boxplots'); plt.title('Boxplots of all quantTypes')
 plt.xscale('log')
 plt.savefig('book.jpg')
 plt.show()
 ```
 
-
 ![Boxplotfig](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/boxplot.PNG){: .center-block :}
 
 
+#### Notification
+{: .box-note}
+**Note:** This is a notification box.
 _if there is a high number of values below detection (<25%) there is no chance that this data will approach a normal or lognormal distribution_ [Riemman,1999](https://link.springer.com/article/10.1007/s002549900081)
 
 
-
-
-test for normality
 [test for normalilty](https://machinelearningmastery.com/a-gentle-introduction-to-normality-tests-in-python/)
