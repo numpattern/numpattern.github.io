@@ -42,3 +42,9 @@ foo(3)
 
 {: .box-error}
 **Error:** This is an error box.
+
+
+Best Regards,
+
+**_Harold G. Velasquez_**
+_Geologist_

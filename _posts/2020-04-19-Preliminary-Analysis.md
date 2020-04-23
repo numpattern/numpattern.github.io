@@ -133,3 +133,8 @@ _if there is a high number of values below detection (<25%) there is no chance t
 
 
 [test for normalilty](https://machinelearningmastery.com/a-gentle-introduction-to-normality-tests-in-python/)
+
+Best Regards,
+
+**_Harold G. Velasquez_**
+_Geologist_

@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Upcoming posts
-subtitle: Excerpt from Soulshaping by Jeff Brown
-bigimg: /img/per009rz.jpg
-tags: [books, test]
+subtitle: Description of topics
+bigimg: /img/bigdataspace.jpg
+tags: [Geostatistics, Programming]
 ---
 
-- EDA
+- Normal test
 - Bootstrap technique
 - Declustering
 
 
-Regards
+Best Regards,
 
-_Harold G. Velasquez_
-
+**_Harold G. Velasquez_**
+_Geologist_

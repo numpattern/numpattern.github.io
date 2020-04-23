@@ -112,4 +112,7 @@ Ok, It resulted well. I will be updating this post for other types of Data, as I
 
 Bests,
 
-_Harold G. Velasquez_
+Best Regards,
+
+**_Harold G. Velasquez_**
+_Geologist_
