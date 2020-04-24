@@ -14,7 +14,7 @@ df_quantVal = df['quantVal'].astype('float64')
 df_quantVal.describe()
 ```
 
-![df_quantVal_Dataframe](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/histogram.PNG){: .center-block :}
+![df_quantVal_Dataframe](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/post002_dataframe.PNG){: .center-block :}
 
 
 We know forehead that there are some columns that hold wrong data types due to the interpretation that pandas gave to them. Prior further analysis we must ensure that out data types are correct. Re-assigning data types would be faster and in fact  every operation would be faster in a numpy array but so far let's do it with a Dataframe.
