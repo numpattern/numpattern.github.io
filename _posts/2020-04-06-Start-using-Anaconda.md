@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to start using Anaconda
+title: How to start using Jupyter
 subtitle: Setting a New workable environment
 bigimg: /img/bigdataspace.jpg
 tags: [Anaconda, notebook, jupyter]
@@ -8,6 +8,7 @@ comments: true
 ---
 
 **Specifications:**
+These are the specifications of my laptop, as you can see not much is needed.
 
 --- | ---
 Item | Details
@@ -18,15 +19,13 @@ Installed memory (RAM): | 8.00 GB (7.87 GB usable)
 System type:            | 64-bit Operating System, x64 based processor
 
 **Assumptions:**
-- We have succesfully installed Anaconda3
+- We have succesfully installed Anaconda3 (I recommend  version 3 instead of 2)
 - We wish to work with Jupyter notebooks
 - We are agree to use Conda environments
 
 Jupyter Notebook can be called by means of your  command line interface _Anaconda prompt_ on Windows. To do that type _Anaconda_ on your windows search field, once we are in the prompt, just type _jupyter notebook_ and press Enter, it will call jupyter notebook. We can also initialize the _Anaconda Navigator_ and launch _jupyter notebook_ option while in the _Home_ tab (I prefer to execute tasks since the prompt)
 
 Jupyter Notebooks are a powerful choice to write and iterate on Python code for data analysis, you are able to write lines of code and run them one at a time. 
-
-**A short-key we can use in Jupyter-Notebook is the Shift-Enter to run one line. Said all this, I think we can go into the python code to start creating out SVM python code.**
 
 You can start by knowing your active environment by default which is named _base_ so try the following on your Anaconda prompt:
 
@@ -84,13 +83,16 @@ conda activate myenv
 python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
 ```
 
-Finally, to start your _notebook_ run the following while in your _base_ environment (do not try to do it, being in other new environment), and wait until Jupyter loads in your _Internet Explorer_ using a default localhost.
+Finally, to start your _notebook_ run the following while in your _base_ environment (do not try to do it, being in other new environment; do not close the Anaconda prompt) , and wait until Jupyter loads in your _Internet Explorer_ using a default localhost.
 
 ```python
 #This is a simpler way to know it. All the packages you have installed
 conda activate base  #Activate your default environment
 jupyter notebook
 ```
+
+If you want to kill the kernel (close the Jupyter) type CTRL+C in your keyboard while you are in in your Anaconda prompt.
+
 There are many others functionalities that we will learn on the way but meanwhile, we are ready to get to the next stage.
 
 
