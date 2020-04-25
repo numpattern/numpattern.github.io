@@ -33,22 +33,22 @@ df1.dtypes
 
 <center>
 
-Column name | Data type
---- | ---
-siteId        | int64
-id            | int64
-gcSampleId    | int64
-quantVal      | float64
-repeatCd      | object
-bdlFlag       | object
-batchSampleId | int64
-batchSeqId    | int64
-quantType     | object
-unitId        | int64
-unitCd        | object
-unitbdlFlag   | object
-maxValue      | int64
-minValue      | int64
+| Column name   | Data type |
+| ------------- | --------- |
+| siteId        | int64     |
+| id            | int64     |
+| gcSampleId    | int64     |
+| quantVal      | float64   |
+| repeatCd      | object    |
+| bdlFlag       | object    |
+| batchSampleId | int64     |
+| batchSeqId    | int64     |
+| quantType     | object    |
+| unitId        | int64     |
+| unitCd        | object    |
+| unitbdlFlag   | object    |
+| maxValue      | int64     |
+| minValue      | int64     |
 
 </center>
 
