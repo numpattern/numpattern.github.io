@@ -7,6 +7,7 @@ tags: [EDA,Statistics, ]
 
 ## Analyzing Tabular Data
 
+
 what do we understand by tabular data? It means that our data is arranged in In this post we will use the information that we extracted from the **Getting Disclosed GeoInfo** post. We will proceed to analyze different sorts of data. In the first example we take the Gold Assay from the Access Database that came from Victoria-Australia.
 
 ```python
@@ -64,6 +65,8 @@ We now can evaluate de resulted statistics from the _quantVal_ column. At first 
 | max   | 710000.00 |
 
 
+### Histograms and Cumulative Ditrubutions
+
 Let's take a first sight of our _quantVal_ filtered by _quantType_ column = 'Gold', by means of histograms of the original values, cumulative distribution of the log(base e) of the values and histogram of the ln of the original values
 
 ```python
@@ -103,6 +106,8 @@ plt.show()
 
 ![Histograms](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/histogram.PNG){: .center-block :}
 
+## Boxplots
+
 By means of a boxplot we will get an insight of the distributions of all the Data we have in our Categorical Datatable with values.
 
 ```python
@@ -136,5 +141,5 @@ _if there is a high number of values below detection (<25%) there is no chance t
 
 Best Regards,
 
-**_Harold G. Velasquez_**
+**_Harold G. Velasquez_**.
 _Geologist_
