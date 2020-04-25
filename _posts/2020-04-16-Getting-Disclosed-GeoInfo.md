@@ -18,7 +18,7 @@ But these Datasets come in a wide range of Dataformats (e.g GIS Data, Big data, 
 
 I downloaded files from each of the links listed and the datafiles I found was .dbf, .mdb, .txt, .hdf, .csv and so forth. I will continue to add different kind  of formats on the progress and how to handle this data in order to getting further analysis.
 
-### Opening .dbf files into Python using geopandas
+## Opening .dbf files into Python using geopandas
 ______
 
 Now we will see first how to import _.dbf_ files. Note that the dBASE table (.dbf) file is one of the three files required for a valid ESRI Shapefile.
@@ -71,21 +71,21 @@ Below I show the results of using _contextily_ package
 ## Opening Micrsoft Access Database files
 ___
 
+To access Database files we are required to prior establish a connection with our database, for that purpose there is the ODBC (stands for _Open Database Connection_) which is a Standard for acccesing Databases. It's needed to have the right _ODBC Driver_ for the specific Database.
+
 I strongly recommend the next link to give you an insight of what we need to set our connection. [mdb accdb files](https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-Microsoft-Access)
 
-When I first tried the next code, I obtained a empty list which meant that I lacked of the right _Access Database Driver_ on my machine, even when I had the Office installed. Recall that it is important to know what is the _bit version_ of both your Office and your Python. They have to be the same I mean compatible. In my case, it was 64bits Office and 64bits Python. The next code let us know all that pyodbc drivers we have available to use.
-
+We run the next code to check what ODBC drivers we have installed.
 ```python
 import pyodbc
 [x for x in pyodbc.drivers() if x.startswith('Microsoft Access Driver')]
 ```
 
-I encountered an empty list from the previous python code and that meant I did not have compatible drivers so I had to install it. _Microsoft Access Database Engine 2010_ from the Microsoft homepage.
+I obtained a empty list which meant that I lacked of _Access Database Driver_ on my machine, even when I had the Office installed, I did not have compatible drivers so I had to install them. For that, I googled _Microsoft Access Database Engine 2010_ from the Microsoft homepage. Recall that it is important to know what is the _bit version_ of both your Office (Microsoft Access) and your Python software; they have to be the same I mean compatible. In my case, it was _64bits_ Office and _64bits_ Python. 
 
-After a lot of problems trying to figure out why I got the error _General error Unable to open registry key Temporary (volatile) …” from Access ODBC_ This page saved my life. 
-[Solve Error](https://stackoverflow.com/questions/26244425/general-error-unable-to-open-registry-key-temporary-volatile-from-access). I recommend you read that after continuing. It is preferably to verify user permissions to the path of your Access file, in my case I opted to locate my Access Database file in my working directory.
+After a lot of problems trying to figure out why I got the next error _General error Unable to open registry key Temporary (volatile) …” from Access ODBC_ This page saved my life. [Solve Error](https://stackoverflow.com/questions/26244425/general-error-unable-to-open-registry-key-temporary-volatile-from-access). I recommend you read that after continuing, but mentioning one of the common issues... It is preferably to verify user permissions to the path of your Access file, in my case I opted to relocate my Access Database file in the working directory of my _Jupyter Notebook Environment_.
 
-Let's try the read_sql function from pandas. It is easier than use the old cursor (for Dataframes purpose)
+Let's now try the read_sql function from pandas. It is easier than using the old cursor (for Dataframes purpose)
 
 ```python
 import pyodbc
@@ -102,15 +102,14 @@ df = pd.read_sql(SQL, conn)
 conn.close()
 ```
 
+Belows as we can see, is the result. We are now able to make SQL queries to our databases and bring them into python.
+
 ![Dataframe](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/post002_dataframe.PNG){: .center-block :}
 
 
 [Note](https://pbpython.com/pandas_dtypes.html) _Use this link to follow instructions how to deal with non clean database from scratch regarding al dtypes on your dataframe._
 
-
 Ok, It resulted well. I will be updating this post for other types of Data, as I look for a Dataset that fits with our next analysis. If you have questions regarding this post, feel free to contact me so I can help you. Also, if you have some dataformats you would like to know how to handle, tell me.
-
-Bests,
 
 Best Regards,
 

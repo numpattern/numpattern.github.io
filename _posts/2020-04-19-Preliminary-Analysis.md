@@ -7,8 +7,7 @@ tags: [EDA,Statistics, ]
 
 ## Analyzing Tabular Data
 
-
-What do we understand by tabular data? It means that our data is arranged in rows and columns. Pandas Dataframe is a good package to aim this goal as it is designed to handle data which is arranged in a set of labeled columns and numbered by row indexes. In this post we will use the information that we extracted from the **Getting Disclosed GeoInfo** post. We will proceed to analyze different sorts of data. In the first example we take the Gold Assay from the Access Database that came from Victoria-Australia.
+_What do we understand by tabular data?_ It means that our data is arranged in rows and columns. Pandas Dataframe is a good package to deal with this format as it is designed to handle data which is arranged in a set of labeled columns and numbered by row indexes; the columns can have different data types, but elements in a single column must be the same datatype. In this post we will use the information that we extracted from the **Getting Disclosed GeoInfo** post from the Access Database from Victoria State Goverment. As a first example let's evaluate the _quantVal_ column.
 
 ```python
 df_quantVal = df['quantVal'].astype('float64')
