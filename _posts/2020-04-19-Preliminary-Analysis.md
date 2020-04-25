@@ -32,7 +32,7 @@ df1.dtypes
 ```
 
 <center>
----|---
+
 Column name | Data type
 --- | ---
 siteId        | int64
@@ -49,12 +49,13 @@ unitCd        | object
 unitbdlFlag   | object
 maxValue      | int64
 minValue      | int64
+
 </center>
 
 We now can evaluate de resulted statistics from the _quantVal_ column. At first glance, we have minimum values as 0.0001 and maximun as 710 000, and the Q3 is 52.9 so It seems from the description below that we have a strongly skewed data.
 
 <center>
---- | ---
+
 Statistics | Value
 --- | ---
 count | 672587
@@ -65,6 +66,7 @@ min   | 0.0001
 50%   | 18.00
 75%   | 52.90
 max   | 710000.00
+
 </center>
 
 ### Histograms and Cumulative Ditrubutions
