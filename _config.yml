@@ -121,7 +121,7 @@ google_analytics: "UA-163797762-1"
 disqus: "parallelstats"
 
 # To use Facebook Comments, fill in a Facebook App ID
-# fb_comment_id: ""
+fb_comment_id: "860904934392296"
 
 # To use Staticman comments, fill in repository, branch, and endpoint
 staticman:
