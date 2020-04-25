@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upcoming posts
-subtitle: Description of topics
+subtitle: List of coming topics
 bigimg: /img/bigdataspace.jpg
 tags: [Geostatistics, Programming]
 ---
