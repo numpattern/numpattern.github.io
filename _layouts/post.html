@@ -8,7 +8,7 @@ layout: base
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-    {% include comments.html %}
+
 
       {% if page.gh-repo %}
         {% assign gh_split =  page.gh-repo | split:'/'  %}
@@ -31,6 +31,10 @@ layout: base
             {% endfor %}
           {% endif %}
         </div>
+      {% endif %}
+
+      {% if page.social-share %}
+        {% include social-share.html %}
       {% endif %}
 
       <article role="main" class="blog-post">
