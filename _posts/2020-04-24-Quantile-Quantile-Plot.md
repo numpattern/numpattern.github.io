@@ -9,7 +9,7 @@ tags: [EDA,Statistics, ]
 
 In statistics, a probability plot is a graphical technique for comparing two data sets, either _two sets of empirical observations_, _one empirical set against a theoretical set, or (more rarely) two theoretical sets against each other._ So we mentioned 3 different cases of choosing a couple of distribution to use them in both axis **x** and axis **y**.
 
-In this specific case, we will try the case of testing 1 empirical dataset distribution against a theoretical distribution (**Normal Standard Distribution**). For this, let's use the plobplot function of the _scipy_ package. We have to mention that there are other packages in order to make a Q-Q plot.
+In this specific case, we will try the case of testing 1 empirical dataset distribution against a theoretical distribution (**Standard Normal Distribution**). For this, let's use the plobplot function of the _scipy_ package. We have to mention that there are other packages in order to make a Q-Q plot.
 
 ```python
 import scipy.stats as stats
@@ -32,3 +32,5 @@ plt.show()
 ```
 
 Base upon this Q-Q Plot we can see that out distribution is definitively not Normal, but further analysis must be carried out to select our data as Normal as possible.
+
+![Q-Q-Plot](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/qqplot.png){: .center-block :}
