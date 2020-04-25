@@ -142,4 +142,4 @@ _if there is a high number of values below detection (<25%) there is no chance t
 Best Regards,
 
 **_Harold G. Velasquez_**.
-_Geologist_
+_Geoscientist_

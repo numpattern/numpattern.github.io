@@ -44,5 +44,5 @@ foo(3)
 
 Best Regards,
 
-**_Harold G. Velasquez_**
-_Geologist_
+**_Harold G. Velasquez_**  
+_Geoscientist_

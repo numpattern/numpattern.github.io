@@ -34,3 +34,9 @@ plt.show()
 Base upon this Q-Q Plot we can see that out distribution is definitively not Normal, but further analysis must be carried out to select our data as Normal as possible.
 
 ![Q-Q-Plot](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/qqplot.png){: .center-block :}
+
+
+Best Regards,
+
+**_Harold G. Velasquez_**.
+_Geoscientist_

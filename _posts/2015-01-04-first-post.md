@@ -11,6 +11,6 @@ If  you want to receive some orientation or help to carry out these posts, do no
 
 Best Regards,
 
-**_Harold G. Velasquez_**
-_Geologist_
+**_Harold G. Velasquez_**  
+_Geoscientist_
 
