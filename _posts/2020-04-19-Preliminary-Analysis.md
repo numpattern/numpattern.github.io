@@ -3,6 +3,7 @@ layout: post
 title: Preliminary Data Analysis
 subtitle: Histograms and Boxplots
 tags: [EDA,Statistics, ]
+share-img: https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/boxplots.PNG
 ---
 
 ## Analyzing Tabular Data
