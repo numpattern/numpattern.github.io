@@ -2,6 +2,7 @@
 layout: post
 title: First post!
 image: /img/hello_world.jpg
+share-img: /img/qqplot.png
 ---
 
 This is my first post, _How exciting I am_ I will be developing a wide range of topics ranging from Geosciences, Mathematics to Programming, optimization of analytical processes and Databases.
