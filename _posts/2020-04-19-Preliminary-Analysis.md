@@ -9,6 +9,7 @@ tags: [EDA,Statistics, ]
 
 _What do we understand by tabular data?_ It means that our data is arranged in rows and columns. Pandas Dataframe is a good package to deal with this format as it is designed to handle data which is arranged in a set of labeled columns and numbered by row indexes; the columns can have different data types, but elements in a single column must be the same datatype. In this post we will use the information that we extracted from the **Getting Disclosed GeoInfo** post from the Access Database from Victoria State Goverment. As a first example let's evaluate the _quantVal_ column.
 
+
 ```python
 df_quantVal = df['quantVal'].astype('float64')
 df_quantVal.describe()
@@ -75,7 +76,7 @@ df1 = df1[['quantVal','quantType']]
 df1 = df1.loc[df1['quantType'] == 'Gold']
 df1['ln_quantVal'] = np.log(df1['quantVal'])
 ```
-
+Ok now,
 
 ```python
 import matplotlib.pyplot as plt
