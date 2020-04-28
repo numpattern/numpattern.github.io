@@ -4,7 +4,7 @@ title: How can we get Disclosed Geo-scientific Data from Geological Organization
 subtitle: From Beginning
 bigimg: /img/bigdataspace.jpg
 tags: [Database, GIS, geopandas, Access]
-share-img: https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/bigdataspace.jpg
+share-img: "https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/bigdataspace.jpg"
 ---
 
 ## Getting Data we can work with

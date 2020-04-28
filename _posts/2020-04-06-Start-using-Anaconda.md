@@ -5,7 +5,7 @@ subtitle: Setting a New workable environment
 bigimg: /img/bigdataspace.jpg
 tags: [Anaconda, notebook, jupyter]
 comments: true
-share-img: https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/jupyter.jpg
+share-img: "https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/jupyter.jpg"
 ---
 
 **Specifications:**
