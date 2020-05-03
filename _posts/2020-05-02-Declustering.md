@@ -14,7 +14,7 @@ ___
 
 Even modern stochastic simulation algorithms do not correct the impact of clustered data on the target histogram; these algorithms require a distribution model (histogram) that is representative of the entire volume being modeled. Simulation in an area with sparse data relies on the global distribution which must be representative of all areas being modelled.
 
-A set of python wrappers to provide us access to GSLIB F90 executables. Thanks to GeostatsPy Functions - by **GeostatsGuy** (search him in Github) Regarding to this functions, some comments were included. Maintenance at https://git.io/fNgR7  
+A set of python wrappers to provide us access to GSLIB F90 executables. Thanks to GeostatsPy Functions - by **GeostatsGuy** (search him in Github) Regarding to this functions, some comments were included. Maintenance at [here](https://git.io/fNgR7)  
 Note: GSLIB executables: declus.exe must be in the working directory for our purposes
 To find what's your working directory you can try executing %pwd
 
@@ -22,7 +22,7 @@ Let's make a declustering analysis on our large Gold ppb dataset from Victoria -
 
 ### Requirements:
 
-- Download the Fortran90 for X64 OS Windows package of GSLIB executables, at https://git.io/fNgR7  
+- Download the Fortran90 for X64 OS Windows package of GSLIB executables, at [here](https://git.io/fNgR7)  
 - Locate the declus.exe executable on your notebook working directory
 - You can get your working directory by running here the code: **%pwd**
 - Have a previous understanding of what we did on **Getting Disclose GeoInfo** post.
@@ -131,11 +131,10 @@ we have our 2 dataframes in one df.
 Then, we select some the main columns we'll be needing in the next steps. These fields are calcEasting, calcNorthing (UTM Coordinates) , quantVal (assay values), unitCd(measurement unit), quantType(element analyzed), siteId(solely location of measurement); calcAltitude and calcLongitude(WGS84 Lat Lon coordinates)
 
 As we saw in the previous post (Getting GeoInfo), we filter data to 
-only ppb measurements of Gold
-
-#Joining DataFrames
+only ppb measurements of Gold.
 
 ```python
+#Joining DataFrames
 df = df.join(df2.set_index('siteId'), on='siteId')
 #Filtering DataFrames
 df = df[['calcEasting','calcNorthing','quantVal',
@@ -174,9 +173,8 @@ dtype_dict["quantVal"] = 'float'
 #Now let's check it out
 df = df.astype(dtype_dict)
 df.dtypes
+#Now the 'quantVal' column is float64
 ```
-
-quantVal         float64
 
 As we did many changes and filtering, it is recommended to reset the index of our dataframe. The indexes are the numbers to the left that normally are sequential. When you do filtering or deleting some rows, these indexes doesnt change so it is better to reset them and make then consecutives.
 ```pythonropna()
@@ -246,6 +244,10 @@ plt.show()
 #As we can see our data lies in the southern zone of Australia in Victoria.
 ```
 
+
+![Map with assay locations](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_01.PNG){: .center-block :}
+
+
 Now I will show you how to make a simple scatter with coloured points of the quantValue value.
 let's make am equal population legend so we need to find equals quantiles first.
 
@@ -254,16 +256,17 @@ print('quantiles and its values')
 df['quantVal'].quantile([0.15,0.3,0.45,0.60,0.75,0.9,0.99])
 ```
 
-Out[10]:
+Quantile | Value
+--- | ---
+0.15 |     1.00
+0.30 |     1.84
+0.45 |     3.00
+0.60 |     5.00
+0.75 |    10.00
+0.90 |    32.00
+0.99 |   400.00
 
-0.15      1.00
-0.30      1.84
-0.45      3.00
-0.60      5.00
-0.75     10.00
-0.90     32.00
-0.99    400.00
-
+___
 
 Finally as we already know the values at specific quantiles, we use the cmap to create a legend for our **quantVal** values and the scatter to plot them. It can be seen in the plot that there are lots of low values clustered across all the area (these are the values between 0.00 and 1.00). There is cluster in high values as well but they are considerably fewer. This is important to know when we choose the bmin parameter in the declus.exe.
 
@@ -302,6 +305,10 @@ plt.legend(loc='lower left')
 plt.grid()
 plt.show()
 ```
+
+
+![Gold ppb in Victoria](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_02.PNG){: .center-block :}
+
 
 ### Declustering Process itself using GSLIB wrapper
 ___
@@ -348,6 +355,10 @@ plt.xlim(0,25000)
 plt.show()
 ```
 
+
+![Cell Size vs Declustered mean](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_03.PNG){: .center-block :}
+
+
 The graph below 'Gold Values vs Declustered Weights' show us how the Weights we assigned. As we know, the Weight of a Sample is inversely proportional to the number of Samples that lies on a given cell size, it means the the more samples lies on a single cell, the lesser the weight assigned to each samples is and viceverse.
 
 In our case, low values were assigned with higher weight, it is evident since coarser sampling (so less samples in a given cell size) must be taken in zones with low values in exploration
@@ -364,6 +375,10 @@ plt.ylabel('Declustered Weights')
 plt.title('Gold Values vs Declustered Weights')
 plt.grid()
 ```
+
+
+![Gold Values vs Declustered weights](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_04.PNG){: .center-block :}
+
 
 It is time to compare our results with the original Data, by using weighted histograms.
 
@@ -405,6 +420,9 @@ plt.show()
 ```
 
 
+![Declustered Density vs Original Density](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_05.PNG){: .center-block :}
+
+
 In the declus.exe, the Weights calculated and assigned to each sample sum up a total equal to the number of samples in 'quantVal'. In order to calculate the mean and Standard Deviation, the weights must sum up 1 so we have to devide all the weights by the number of total samples first and check if this equals 1.
 
 ```python
@@ -436,7 +454,7 @@ print('orig_dev: ', round(orig_dev))
 print('declus_mean: ', round(declus_mean,2))
 print('declus_dev: ', round(declus_dev))
 ```
-
+  
 orig_mean:  33.87
 orig_dev:  249881
 declus_mean:  20.29
