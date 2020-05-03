@@ -6,13 +6,12 @@ subtitle: GSLIB Cell Based Method.
 tags: [EDA,Statistics, Declustering ]
 ---
 
+Even modern stochastic simulation algorithms do not correct the impact of clustered data on the target histogram; these algorithms require a distribution model (histogram) that is representative of the entire volume being modeled. Simulation in an area with sparse data relies on the global distribution which must be representative of all areas being modelled.
 
 ## Cell based Declustering
 ___
 
 ### Background
-
-Even modern stochastic simulation algorithms do not correct the impact of clustered data on the target histogram; these algorithms require a distribution model (histogram) that is representative of the entire volume being modeled. Simulation in an area with sparse data relies on the global distribution which must be representative of all areas being modelled.
 
 A set of python wrappers to provide us access to GSLIB F90 executables. Thanks to GeostatsPy Functions - by **GeostatsGuy** (search him in Github) Regarding to this functions, some comments were included. Maintenance at [here](https://git.io/fNgR7)  
 Note: GSLIB executables: declus.exe must be in the working directory for our purposes
