@@ -3,9 +3,9 @@ layout: post
 title: Declustering
 subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
 tags: [EDA,Statistics, Declustering]
-bigimg: /img/20200502_05.png
+bigimg: /img/20200502_05.PNG
 show-avatar: false
-share-img: https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_05.png
+share-img: /img/20200502_05.PNG
 ---
 
 Even modern stochastic simulation algorithms do not correct the impact of clustered data on the target histogram; these algorithms require a distribution model (histogram) that is representative of the entire volume being modeled. Besides, simulation in an area with sparse data relies on the global distribution which must be representative of all areas being modelled. In this post, a step by step Declustering method will be reviewed. For a better experience in mobile devices, please use the option as **Desktop Site** since I didn't do too much maintenance related to visualizations in cellphones.
