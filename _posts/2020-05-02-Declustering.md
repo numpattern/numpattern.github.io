@@ -142,22 +142,17 @@ df = df.loc[(df['quantType'] == 'Gold') & (df['unitCd'] == 'ppb')]
 df.describe()
 ```
 
+Below is the statistics for DataFrame df:
+
 Param | calcEasting | calcNorthing | calcLongitude | calcLatitude | siteId
 --- | --- | --- | --- | --- | ---
 count | 93842.000000 | 9.384200e+04 | 93842.000000 | 93842.000000 | 93842.000000 
-
 mean | 528222.666812 | 5.915496e+06 | 144.057888 | -36.883061 | 649464.693655 
-
 std | 208543.295143 | 5.248331e+04 | 1.050237 | 0.473944 | 143902.457764 
-
 min | 229027.000000 | 5.721084e+06 | 141.217100 | -38.655440 | 433360.000000 
-
 25% | 296705.250000 | 5.880075e+06 | 143.553165 | -37.205860 | 541069.250000 
-
 50% | 600044.500000 | 5.919088e+06 | 143.931650 | -36.854025 | 628026.500000 
-
 75% | 738076.750000 | 5.941994e+06 | 144.699290 | -36.647520 | 667880.750000 
-
 max | 771118.000000 | 6.035369e+06 | 147.001250 | -35.789090 | 958454.000000 
 
 
@@ -254,6 +249,9 @@ let's make am equal population legend so we need to find equals quantiles first.
 print('quantiles and its values')
 df['quantVal'].quantile([0.15,0.3,0.45,0.60,0.75,0.9,0.99])
 ```
+
+We can see now the values in different quantiles for our equal populated legend.  
+
 
 Quantile | Value
 --- | ---
