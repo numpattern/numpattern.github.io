@@ -3,42 +3,41 @@ layout: post
 title: Declustering - An essential part of Resources Evaluation
 subtitle: GSLIB Cell Based Method.
 tags: [EDA,Statistics, Declustering ]
+bigimg: /img/20200502_05.PNG
 show-avatar: false
 share-img: https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_05.PNG
 ---
 
-Even modern stochastic simulation algorithms do not correct the impact of clustered data on the target histogram; these algorithms require a distribution model (histogram) that is representative of the entire volume being modeled. Simulation in an area with sparse data relies on the global distribution which must be representative of all areas being modelled.
+Even modern stochastic simulation algorithms do not correct the impact of clustered data on the target histogram; these algorithms require a distribution model (histogram) that is representative of the entire volume being modeled. Besides, simulation in an area with sparse data relies on the global distribution which must be representative of all areas being modelled. In this post, a step by step Declustering method will be reviewed. For a better experience in mobile devices, please use the option as **Desktop Site** since I didn't do too much maintenance related to visualizations in cellphones.
 
 ## Cell based Declustering
 ___
 
 ### Background
 
-A set of python wrappers to provide us access to GSLIB F90 executables. Thanks to GeostatsPy Functions - by **GeostatsGuy** (search him in Github) Regarding to this functions, some comments were included. Maintenance at [here](http://www.statios.com/Quick/gslib.html)  
-Note: GSLIB executables: declus.exe must be in the working directory for our purposes
-To find what's your working directory you can try executing %pwd
+A set of python wrappers are embedded herein, to provide us access to GSLIB F90 executables , so I must thank to GeostatsPy Functions - by **GeostatsGuy** (from Professor Michael Pyercz). The maintenance of this wrappers you can find it at Github. These wrappers will allow us to execute the Cell Based Declustering once our Data is ready.
 
-Let's make a declustering analysis on our large Gold ppb dataset from Victoria -Australia
+Now, let's make a declustering analysis on our large Gold ppb dataset from Victoria -Australia
 
 ### Requirements:
 
 - Download the Fortran90 for X64 OS Windows package of GSLIB executables, at [here](http://www.statios.com/Quick/gslib.html)  
-- Locate the declus.exe executable on your notebook working directory
+- Locate the declus.exe executable on your notebook working directory. To know what is your working directory you can try %pwd on your notebook
 - You can get your working directory by running here the code: **%pwd**
-- Have a previous understanding of what we did on **Getting Disclose GeoInfo** post.
-- Have a knowledge of what Declustering is and how to interpret it.
+- Have a previous understanding of what we did on [**this**](https://haroldvelasquez.github.io/2020-04-16-Getting-Disclosed-GeoInfo/) post.
+- Have a knowledge of what Declustering is and how to interpret it. You can find more information about the declus.exe [here](http://www.gslib.com/gslib_help/declus.html).
 
 ### Recomendations:
 
-- For a better experience in mobile devices, please use the option as **Desktop Site** since I didn't do too much maintenance related to visualizations in mobiles.
+- As I said before, for a better experience in mobile devices, please switch on the option as **Desktop Site** since I didn't do too much maintenance related to visualizations in mobiles.
 
-### Setting wrappets for GSLIB executables
+### Setting wrappers for GSLIB executables
 
-We define a function to read GeoEAS files. We also define the wrapper **declus** in order to use the declus.exe GSLIB. Notice that some of the **Parameters for Declus.exe** have been set up e.g.:
+Assuming that we did the previously said, let's now define a function to read GeoEAS files (text files in GSLIB readable format). Also, let's define the wrapper **declus** in order to use the declus.exe located in our working directory. Have in mind that some of the **Parameters** for declus.exe have been already set up through the python wrapper, e.g.:
 
-- Z value has not been considered as we are working with 2D dataset
-- The _Number of origin offsets_ where its default value is 4. 
-- bmin is set to 0 (which means that the program looks for the minimum declustered mean). In our example we will change to 1 instead, more of this later.
+- Z (elevation) value has not been considered as we are working with 2D dataset.
+- The _Number of origin offsets_ where its default value is 5. 
+- bmin is set to 0 (which means that the program looks for the minimum declustered mean).
 
 
 ```python
@@ -105,10 +104,9 @@ def declus(df,xcol,ycol,vcol,cmin,cmax,cnum,bmin):
 
 ### Loading the data
 
-Couples of libraries at fist, like pyodbc to establish database connection with
-SQL, Access and so forth (we already saw this type of connection in a previous post "Getting Disclose GeoInfo"). We also import pandas to handle DataFrames.
+As we have the wrappers correctly defined, we will need couples of libraries, like pyodbc to establish database connection with SQL, Access and so forth (we already saw this type of connection in a previous post [here](https://haroldvelasquez.github.io/2020-04-16-Getting-Disclosed-GeoInfo/). We also import pandas to handle DataFrames.
 
-In this opportunity. we are calling 2 queries from different tables **GSITEASSAY** (containing assay values and characteristics) and **GSITEHEADER** (with location coordinates, datum and zone).
+What is different now is that we are calling 2 queries from different tables **GSITEASSAY** (containing assay values and characteristics) and **GSITEHEADER** (with location coordinates, datum and zone), this is necessary because we need the have the spatial location of our data.
 
 ```python
 import pyodbc
@@ -128,13 +126,8 @@ df2 = pd.read_sql(SQL2, conn)
 conn.close()
 ```
 
-We are joining both df and df2 using the df.siteId as main index, so now
-we have our 2 dataframes in one df.
-
-Then, we select some the main columns we'll be needing in the next steps. These fields are calcEasting, calcNorthing (UTM Coordinates) , quantVal (assay values), unitCd(measurement unit), quantType(element analyzed), siteId(solely location of measurement); calcAltitude and calcLongitude(WGS84 Lat Lon coordinates)
-
-As we saw in the previous post (Getting GeoInfo), we filter data to 
-only ppb measurements of Gold.
+Once our query is done, we start by joining both df and df2 using the df.siteId as main index, so we get our 2 dataframes in one solely  DataFrame **df**, later, we select some the main columns we'll be needing in the next steps, these fields are: calcEasting, calcNorthing (UTM Coordinates) , quantVal (assay values), unitCd(measurement unit), quantType(element analyzed), siteId(solely location of measurement); calcAltitude and calcLongitude(WGS84 Lat Lon coordinates). As we saw in the previous mentioned post, we now filter data to 
+only ppb assays for Gold.
 
 ```python
 #Joining DataFrames
@@ -146,7 +139,7 @@ df = df.loc[(df['quantType'] == 'Gold') & (df['unitCd'] == 'ppb')]
 df.describe()
 ```
 
-Below is the statistics for DataFrame df:
+Below is the statistics for DataFrame **df**:
 
 Param | calcEasting | calcNorthing | calcLongitude | calcLatitude | siteId
 --- | --- | --- | --- | --- | ---
@@ -160,7 +153,8 @@ min | 229027.000000 | 5.721084e+06 | 141.217100 | -38.655440 | 433360.000000
 max | 771118.000000 | 6.035369e+06 | 147.001250 | -35.789090 | 958454.000000 
 
 
-We change the datatype for quantVal column
+We change the datatype for **quantVal** column making sure that it is float64.
+
 ```python
 #Again we are making sure our 'quantVal' column is float
 keys = list(df.columns)
@@ -174,7 +168,8 @@ df.dtypes
 #Now the 'quantVal' column is float64
 ```
 
-As we did many changes and filtering, it is recommended to reset the index of our dataframe. The indexes are the numbers to the left that normally are sequential. When you do filtering or deleting some rows, these indexes doesnt change so it is better to reset them and make then consecutives.
+Since we did many changes and filtering, it is recommended to reset the index of our dataframe. The indexes are the numbers to the left of a DataFrame that normally are sequential and correlative. When you do filtering or deleting some rows, these indexes doesn't update automatically so it's better to reset them and make them consecutives.
+
 ```pythonropna()
 df= df.reset_index(drop=True) 
 df.isna()
@@ -208,10 +203,7 @@ This is not an obligatory step, but I really think it is important to get an ins
 import geopandas as gpd
 #gdf.crs = "EPSG:32733"
 gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.calcLongitude, df.calcLatitude))
-```
 
-
-```python
 #These are one of the main projections we need to know to check in our geodataframes
 #WGS84 Latitude/Longitude: "EPSG:4326"
 #UTM Zones (North): "EPSG:32633"
@@ -239,22 +231,20 @@ plt.xlabel('Longitude (degrees)')
 plt.ylabel('Latitude (degrees)')
 plt.grid()
 plt.show()
-#As we can see our data lies in the southern zone of Australia in Victoria.
 ```
 
+As we can see our data lies in the South-Eastern zone of Australia in Victoria.
 
 ![Map with assay locations](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_01.PNG){: .center-block :}
 
-
-Now I will show you how to make a simple scatter with coloured points of the quantValue value.
-let's make am equal population legend so we need to find equals quantiles first.
+Now I will show you how to make a simple scatter with coloured points of the **quantValue** column value and with an equal population legend, so to do that, we need to find equals quantiles first.
 
 ```python
 print('quantiles and its values')
 df['quantVal'].quantile([0.15,0.3,0.45,0.60,0.75,0.9,0.99])
 ```
 
-We can see now the values in different quantiles for our equal populated legend.  
+We see now the values in different quantiles for our equal populated legend.  
 
 
 Quantile | Value
@@ -269,7 +259,7 @@ Quantile | Value
 
 ___
 
-Finally as we already know the values at specific quantiles, we use the cmap to create a legend for our **quantVal** values and the scatter to plot them. It can be seen in the plot that there are lots of low values clustered across all the area (these are the values between 0.00 and 1.00). There is cluster in high values as well but they are considerably fewer. This is important to know when we choose the bmin parameter in the declus.exe.
+Finally as we already know the values at specific quantiles, we use the **cmap** python module to create a legend for our **quantVal** values and the scatter to plot them. It can be seen in the plot that there clustered high values across all the area (these points are coloured in black). This is important to know when we choose the **bmin** parameter in the declus.exe.
 
 - bmin=0 means that we are minimizing the declustered mean
 - bmin=1 means that we are maximizing the declustered mean
@@ -278,7 +268,6 @@ Finally as we already know the values at specific quantiles, we use the cmap to 
 - If high values are clustered, then we will look for minimizing the declustered mean.
 
 Anyway, it is a little more complicated than just maximizing or minimizing a value. Better results were obtained by just picking the coarse grid of sampling, for further  details I encourage you to read some bibliography of Professor Michael Pyrcz **Declustering and Debiasing** . In this post, we will show the case minimizing the declustered mean.
-
 
 ```python
 #'b', 'g', 'r', 'c', 'm', 'y', 'k', 'w'
@@ -307,15 +296,12 @@ plt.grid()
 plt.show()
 ```
 
-
 ![Gold ppb in Victoria](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_02.PNG){: .center-block :}
 
-
-### Declustering Process itself using GSLIB wrapper
+### Declustering process itself using GSLIB wrapper
 ___
   
-  
-Now we are ready to run the wrapper. As it is clear, we need coordinates and a value columns. In our dataset this columns are 'calcEasting', 'calcNorthing' and 'quantVal' respectively. **cmin** and **cmax** are the size of the cells (square cells herein) and **cnum** means that the programm will run that cnum number of cell sizes between **cmin** and **cmax**. As we said before, our **bmin** value is set to 1.
+  Now we are ready to run the wrapper. As it is clear by now, we need coordinates and a value columns. In our dataset this columns are 'calcEasting', 'calcNorthing' and 'quantVal' respectively. **cmin** and **cmax** are the size of the cells (square cells herein) and **cnum** means that the programm will run that cnum number of cell sizes between **cmin** and **cmax**. As we said before, our **bmin** value is set to 1.
 
 
 ```python
@@ -330,13 +316,11 @@ df_wts.columns = ["Weights"]
 samples_wts = pd.concat([df,df_wts],axis = 1)
 ```
 
-
 ### Interpreting our results
 
-This is when we can analyze the results of the declus.exe, in the graph below we can observe the variations of the declustered mean in different cell sizes. We previously set the declus.exe to pick the weights that get the highest declustered mean, but was that right? Further calculations could be carried out and as it can be imagined, more samples must be collected  in zone with higher content and so shouldn't we have set the **bmin** value to Zero?
+This is when we can analyze the results of the **declus.exe**, in the graph below we can observe the variations of the _declustered mean_ in different cell sizes. We previously set the declus.exe to pick the set of weights that get the highest declustered mean, but was that right? As it can be inferred, more samples are usually collected  in zone with higher content and so we have the **bmin** value set to Zero.
 
 I let you to try the calculations, if you have some questions just comment or e-mail me.
-
 
 ```python
 header=['cellsize','mean']
@@ -356,13 +340,11 @@ plt.xlim(0,25000)
 plt.show()
 ```
 
-
 ![Cell Size vs Declustered mean](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_03.PNG){: .center-block :}
-
 
 The graph below 'Gold Values vs Declustered Weights' show us how the Weights we assigned. As we know, the Weight of a Sample is inversely proportional to the number of Samples that lies on a given cell size, it means the the more samples lies on a single cell, the lesser the weight assigned to each samples is and viceverse.
 
-In our case, low values were assigned with higher weight, it is evident since coarser sampling (so less samples in a given cell size) must be taken in zones with low values in exploration
+In our case, low values were assigned with higher weight, it is evident since coarser sampling (so less samples in a given cell size) must be taken in zones with low values in exploration.
 
 ```python
 #samples_wts[['quantVal','Weights']].head(100)
@@ -377,9 +359,7 @@ plt.title('Gold Values vs Declustered Weights')
 plt.grid()
 ```
 
-
 ![Gold Values vs Declustered weights](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_04.PNG){: .center-block :}
-
 
 It is time to compare our results with the original Data, by using weighted histograms.
 
@@ -420,9 +400,7 @@ plt.legend(loc='upper left')
 plt.show()
 ```
 
-
 ![Declustered Density vs Original Density](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_05.PNG){: .center-block :}
-
 
 In the declus.exe, the Weights calculated and assigned to each sample sum up a total equal to the number of samples in 'quantVal'. In order to calculate the mean and Standard Deviation, the weights must sum up 1 so we have to devide all the weights by the number of total samples first and check if this equals 1.
 
@@ -468,10 +446,16 @@ ___
 
 Although hand contouring and a knowledge of the regional geology would reveal the central trend of high and low values of a Random Variable, the details of the true distribution of a specific **RV** (in this example the content of Gold (ppb)),  would be inaccesible in practice.
 
-Assuming that we have defined the parameters for our true distribution, the next step is to compare and our results **orig_mean, orig_dev, declus_mean, declus_dev** with the true mean and standard deviation of the hypothetical True Distribution.
+Assuming that we have defined the parameters for a true distribution, the next step is to compare and our results **orig_mean, orig_dev, declus_mean, declus_dev** with the true mean and standard deviation of the hypothetical True Distribution.
 
 It may be possible that the best Declustered mean will not be the Highest Declustered mean or the Lowest Declustered mean in a given case, and not knowing that will inevitably will lead us to get wrong results. Further analysis must be taken regarding the more regular grid of sampling in the exploration area.
 
 Some Bibliography you can find in:
 - Clayton Deutsch **Geostatistical Reservoir Modelling** Oxford University Press - 2002.
 - Michael Pyrcz **Declustering and Debiasing** Professor at University of Texas.
+
+
+Best Regards,
+
+**_Harold G. Velasquez_**.
+_Geoscientist_
