@@ -273,7 +273,7 @@ Finally as we already know the values at specific quantiles, we use the cmap to 
 - If low values are clustered, then we will look for maximizing the declustered mean.
 - If high values are clustered, then we will look for minimizing the declustered mean.
 
-Anyway, it is a little more complicated than just mazimizing or minimizing a value. Better results were obtained by just picking the coarse grid of sampling, for further  details I encourage you to read some bibliography of Professor Michael Pyrcz **Declustering and Debiasing** . In this post, we will show the case maximizing the declustered mean.
+Anyway, it is a little more complicated than just mazimizing or minimizing a value. Better results were obtained by just picking the coarse grid of sampling, for further  details I encourage you to read some bibliography of Professor Michael Pyrcz **Declustering and Debiasing** . In this post, we will show the case minimizing the declustered mean.
 
 
 ```python
