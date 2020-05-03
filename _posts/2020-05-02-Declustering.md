@@ -2,8 +2,8 @@
 layout: post
 title: Declustering
 subtitle: GSLIB Cell Based Method.
-
 tags: [EDA,Statistics, Declustering ]
+share-img: https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/20200502_05.PNG
 ---
 
 Even modern stochastic simulation algorithms do not correct the impact of clustered data on the target histogram; these algorithms require a distribution model (histogram) that is representative of the entire volume being modeled. Simulation in an area with sparse data relies on the global distribution which must be representative of all areas being modelled.
@@ -13,7 +13,7 @@ ___
 
 ### Background
 
-A set of python wrappers to provide us access to GSLIB F90 executables. Thanks to GeostatsPy Functions - by **GeostatsGuy** (search him in Github) Regarding to this functions, some comments were included. Maintenance at [here](https://git.io/fNgR7)  
+A set of python wrappers to provide us access to GSLIB F90 executables. Thanks to GeostatsPy Functions - by **GeostatsGuy** (search him in Github) Regarding to this functions, some comments were included. Maintenance at [here](http://www.statios.com/Quick/gslib.html)  
 Note: GSLIB executables: declus.exe must be in the working directory for our purposes
 To find what's your working directory you can try executing %pwd
 
@@ -21,12 +21,15 @@ Let's make a declustering analysis on our large Gold ppb dataset from Victoria -
 
 ### Requirements:
 
-- Download the Fortran90 for X64 OS Windows package of GSLIB executables, at [here](https://git.io/fNgR7)  
+- Download the Fortran90 for X64 OS Windows package of GSLIB executables, at [here](http://www.statios.com/Quick/gslib.html)  
 - Locate the declus.exe executable on your notebook working directory
 - You can get your working directory by running here the code: **%pwd**
 - Have a previous understanding of what we did on **Getting Disclose GeoInfo** post.
 - Have a knowledge of what Declustering is and how to interpret it.
 
+### Recomendations:
+
+- For a better experience in mobile devices, please use the option as **Desktop Site** since I didn't do too much maintenance related to visualizations in mobiles.
 
 ### Setting wrappets for GSLIB executables
 
@@ -112,7 +115,7 @@ import pandas as pd
 #Previously checked we had all the odbc drivers installed, in this case *.mdb
 conn_str = (
     r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};' #Driver for 64 bits mdb
-    r'DBQ=C:\Users\HARO\00Openyoureyes\Geochemistry.mdb;' #Database
+    r'DBQ=C:\path\to\yourfile\Geochemistry.mdb;' #Database
     )
 conn = pyodbc.connect(conn_str)
 
