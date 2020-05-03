@@ -10,3 +10,20 @@ tags: [EDA, books]
 _Data Transformations previous to execute a Sequential Gaussian Simulation_ 
 [**Geostatistics Banff, 2004**](https://books.google.com.pe/books?id=_jK4UEsDoP0C&pg=PA544&lpg=PA544&dq=quantile+quantile+transformation+goovaerts&source=bl&ots=t_pq6sraI6&sig=ACfU3U1apBa5KqMQzbEDcEcS7AF56U5WnA&hl=es&sa=X&ved=2ahUKEwioyNGPt4LpAhWSZd8KHc87DkUQ6AEwAnoECAgQAQ#v=onepage&q=quantile%20quantile%20transformation%20goovaerts&f=false)
 
+https://upload.wikimedia.org/wikipedia/commons/b/b7/Universal_Transverse_Mercator_zones.svg
+
+
+Getting our samples into a map
+
+
+The Geocentric Datum of Australia (GDA94) was the official geodetic datum before GDA2020. It was adopted nationally in January 2000. GDA94 replaced the Australian Geodetic Datum 1966 (AGD66) and Australian Geodetic Datum 1984 (AGD84). The standard map projection associated with GDA94 is the Map Grid of Australia 1994 (MGA94), a transverse Mercator projection that conforms to the internationally accepted Universal Transverse Mercator Grid system.
+
+
+
+how to manage plt.plot fig , ax
+https://stackoverflow.com/questions/34162443/why-do-many-examples-use-fig-ax-plt-subplots-in-matplotlib-pyplot-python
+
+
+
+i am saving this in the future to make tile maps from the internet but it didnt work for my data. I think it has to be with my crs projection not defined
+https://ricardopasquini.com/mapping-with-geopandas-and-basemapping-with-contextily/
