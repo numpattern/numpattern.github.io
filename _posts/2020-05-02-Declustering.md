@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Declustering
-subtitle: GSLIB Cell Base Method.
+subtitle: GSLIB Cell Based Method.
 
 tags: [EDA,Statistics, Declustering ]
 ---
