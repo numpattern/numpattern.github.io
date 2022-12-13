@@ -5,13 +5,8 @@ subtitle: A little more in relation to me
 bigimg: /img/per002rz.jpg
 ---
 
-My name is Harold Velasquez. I have the following qualities:
+My name is Harold Velasquez, a M.Sc. student in Geostatistics at the University of Alberta. I spent some years in the mining industry as a geologist. 
 
-I have a B.Sc. in Geological Engineering, besides I definitively enjoy going out for _camping, jogging, surfing, traveling, gym and drinking a good cold beer in hot days_ ... not in that ordering because I love all of them. I am always opened to share experiences and try new things.
-
-**What else do you need to know about me?**
-
-Honestly, I am a guy who loves to study so much all fields related to mathematics and tech-programming. 
 
 **What is my motivation doing this?**
 
