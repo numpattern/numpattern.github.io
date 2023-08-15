@@ -4,7 +4,7 @@
 title: Home 
 
 # Short description of your site
-description: Computational Geosciences
+description: Unconsciouss Graphs
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -22,8 +22,8 @@ description: Computational Geosciences
 navbar-links:
   About me: "aboutme"
   Resources:
-    - Projects: "https://github.com/haroldvelasquez"
-  Author's home: "https://github.com/haroldvelasquez"
+    - Projects: "https://numpattern.github.io/extras_doc/"
+  Author's home: "https://numpattern.github.io/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar

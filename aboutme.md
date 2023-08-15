@@ -1,11 +1,11 @@
 ---
 layout: page
-title: About me
+title: About
 subtitle: 
 bigimg: /img/per002rz.jpg
 ---
 
-My name is Harold Velasquez S., a M.Sc. student in Geostatistics at the University of Alberta. I spent some years in the mining industry as a geologist. I'm currently interested in developing software for uncertainty characterization and processes integration.
+My name is Harold Velasquez S., a M.Sc. student in Geostatistics at the University of Alberta. I spent some years in the mining industry as a geologist. I'm interest in graphs and consciousness. I have some experience in mining as a geologist
 
 **What is my motivation?**
 To start a communite where knowledge can be shared and accesed in real time.
