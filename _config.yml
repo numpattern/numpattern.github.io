@@ -19,14 +19,11 @@ description: Unconsciouss Graphs
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
+#https://jekyllrb.com/tutorials/navigation/ does not work
 navbar-links:
   About me: "aboutme"
   Projects:
-  subfolderitems:
-    - Mining:
-    subsubfolderitems:
-      - Package: "https://numpattern.github.io/extras_doc/"
-    - ML:
+    - Extras: "https://numpattern.github.io/extras_doc/"
 
   Author's: "https://numpattern.github.io/"
 
