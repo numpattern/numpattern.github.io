@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Quantile-Quantile-Plot
-subtitle: Comparing to Normal Distribution.
-
-tags: [EDA,Statistics, ]
+title: Comparing distributions with QQ plots
+#subtitle: Comparing to Normal Distribution.
+tags: [Statistics, ]
 ---
-
 
 In statistics, a probability plot is a graphical technique for comparing two data sets, either _two sets of empirical observations_, _one empirical set against a theoretical set, or (more rarely) two theoretical sets against each other._ So we mentioned 3 different cases of choosing a couple of distribution to use them in both axis **x** and axis **y**.
 

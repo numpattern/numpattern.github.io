@@ -1,16 +1,15 @@
 ---
 layout: page
-title: About
+title: Harold Velasquez
 subtitle: 
 bigimg: /img/per002rz.jpg
 ---
 
-**Harold Velasquez M.Sc. (U of Alberta)**
-A peruvian engineer living in Canada
+**Harold Velasquez M.Sc. (U of Alberta)**  
+A peruvian engineer living in Canada  
+*[Extras](https://numpattern.github.io/extras_doc/) \
+Python Package* for general purpose data analysis
 
-*Extras Python Package*
-[Extras](https://numpattern.github.io/extras_doc/) is an on going python package for basic analysis of data for general purpose
-
-*Geostatistitian*
-I researched on categorical numerical modeling techniques and graph theory
+*Geostatistitian*  \
+I researched at the [Centre for Computational Geostatistics](https://www.ccgalberta.com/) on categorical numerical modeling and graph theory
 

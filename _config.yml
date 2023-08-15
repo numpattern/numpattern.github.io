@@ -1,5 +1,4 @@
 # --- General options --- #
-
 # Name of website
 title: Home 
 
@@ -21,11 +20,11 @@ description: Unconsciouss Graphs
 # List of links in the navigation bar
 #https://jekyllrb.com/tutorials/navigation/ does not work
 navbar-links:
-  About me: "aboutme"
+  About: "aboutme"
   Projects:
     - Extras: "https://numpattern.github.io/extras_doc/"
 
-  Author's: "https://numpattern.github.io/"
+  Blog: "https://numpattern.github.io/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -62,7 +61,7 @@ footer-img: "/img/bgimage.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
+  name: HVS
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -71,11 +70,11 @@ author:
 social-network-links:
   rss: true
   email: "hgvelasq@ualberta.ca"
-  facebook: G.harold.velasquezsanchez
+  #facebook: G.harold.velasquezsanchez
   github: numpattern
-  twitter: harovelasquez91
+  #twitter: harovelasquez91
 #  reddit: yourname
-  linkedin: haroldvelasquez91
+  linkedin: ghsv19
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to start using Jupyter
-subtitle: Setting a New workable environment
+title: Jupyter: Setting a New workable environment
+#subtitle: 
 bigimg: /img/bigdataspace.jpg
 tags: [Anaconda, notebook, jupyter]
 comments: true
