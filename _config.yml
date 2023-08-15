@@ -23,7 +23,7 @@ navbar-links:
   About me: "aboutme"
   Projects:
     - Mining:
-      Package: "https://numpattern.github.io/extras_doc/"
+      - Package: "https://numpattern.github.io/extras_doc/"
 
   Author's: "https://numpattern.github.io/"
 
