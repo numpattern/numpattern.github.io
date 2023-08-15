@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Harold Velasquez
+title:  
 subtitle: 
 bigimg: /img/per002rz.jpg
 ---
