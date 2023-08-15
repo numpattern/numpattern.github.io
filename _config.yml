@@ -22,8 +22,11 @@ description: Unconsciouss Graphs
 navbar-links:
   About me: "aboutme"
   Projects:
+  subfolderitems:
     - Mining:
+    subfolderitems:
       - Package: "https://numpattern.github.io/extras_doc/"
+    - ML:
 
   Author's: "https://numpattern.github.io/"
 
