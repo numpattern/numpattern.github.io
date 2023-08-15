@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jupyter: Setting a New workable environment
+title: Setting a jupyter environment
 #subtitle: 
 bigimg: /img/bigdataspace.jpg
 tags: [Anaconda, notebook, jupyter]

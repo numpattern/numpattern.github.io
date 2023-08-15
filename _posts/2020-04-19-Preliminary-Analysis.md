@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Preliminary Data Analysis: Histograms and Boxplots
+title: Preliminary Data Analysis - Histograms and Boxplots
 #subtitle: Histograms and Boxplots
 tags: [EDA,Statistics, ]
 share-img: https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/boxplots.PNG
