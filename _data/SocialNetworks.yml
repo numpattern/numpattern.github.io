@@ -14,12 +14,12 @@ facebook:
 
 github:
   name: "GitHub"
-  urlTemplate: "https://github.com/haroldvelasquez/"
+  urlTemplate: "https://github.com/numpattern/"
   icon: "fab fa-github"
 
 twitter:
   name: "Twitter"
-  urlTemplate: "https://twitter.com/harovelasquez91"
+  urlTemplate: "https://twitter.com/ghsv19"
   icon: "fab fa-twitter"
 
 reddit:
@@ -34,7 +34,7 @@ email:
 
 linkedin:
   name: "LinkedIn"
-  urlTemplate: "https://www.linkedin.com/in/haroldvelasquez91/"
+  urlTemplate: "https://www.linkedin.com/in/ghsv19/"
   icon: "fab fa-linkedin"
 
 xing:
