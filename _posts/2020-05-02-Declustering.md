@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Declustering
-subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
+#subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
 tags: [EDA,Statistics, Declustering]
 bigimg: /img/20200502_05.PNG
 share-img: /img/20200502_05.PNG
