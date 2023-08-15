@@ -24,7 +24,7 @@ navbar-links:
   Projects:
   subfolderitems:
     - Mining:
-    subfolderitems:
+    subsubfolderitems:
       - Package: "https://numpattern.github.io/extras_doc/"
     - ML:
 
