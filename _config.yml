@@ -21,9 +21,12 @@ description: Unconsciouss Graphs
 # List of links in the navigation bar
 navbar-links:
   About me: "aboutme"
-  Resources:
-    - Projects: "https://numpattern.github.io/extras_doc/"
-  Author's home: "https://numpattern.github.io/"
+  Projects:
+    - title: Mining
+      url: "https://numpattern.github.io/extras_doc/"
+    - title: ML
+
+  Author's: "https://numpattern.github.io/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -68,9 +71,9 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-  email: "harold.velasquez.s@uni.pe"
+  email: "hgvelasq@ualberta.ca"
   facebook: G.harold.velasquezsanchez
-  github: haroldvelasquez
+  github: numpattern
   twitter: harovelasquez91
 #  reddit: yourname
   linkedin: haroldvelasquez91
@@ -87,14 +90,14 @@ social-network-links:
 
 # Select which share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
+  twitter: false
+  facebook: false
   linkedin: true
   github: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "haroldvelasquez.github.io"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "numpattern.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
