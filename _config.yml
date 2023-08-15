@@ -22,9 +22,8 @@ description: Unconsciouss Graphs
 navbar-links:
   About me: "aboutme"
   Projects:
-    - title: Mining
-      url: "https://numpattern.github.io/extras_doc/"
-    - title: ML
+    - Mining:
+      Package: "https://numpattern.github.io/extras_doc/"
 
   Author's: "https://numpattern.github.io/"
 
