@@ -23,7 +23,7 @@ navbar-links:
   About: "aboutme"
   Projects:
     - Extras: "https://numpattern.github.io/extras_doc/"
-  Blog: "blog.html"
+  Blog: "blog"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
