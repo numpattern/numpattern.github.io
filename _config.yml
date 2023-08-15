@@ -107,7 +107,7 @@ url-pretty: "numpattern.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 google_analytics: "G-ZEEK2PJYHW"
 
 # Google Tag Manager ID
-#gtm: ""
+gtm: "GTM-54JLQ9JK"
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
