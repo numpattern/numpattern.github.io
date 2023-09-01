@@ -1,3 +1,13 @@
+---
+layout: post
+title: Create a compute for Azure ML Studio
+#subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
+tags: [Azure]
+bigimg: /img/20200502_05.PNG
+share-img: /img/20200502_05.PNG
+---
+
+
 I need permission to create a resource group under my subscription, then I cannot create a storage account. I cannot create a DataStore as I need subscription Key
 
 Start using Automatic Logging:
