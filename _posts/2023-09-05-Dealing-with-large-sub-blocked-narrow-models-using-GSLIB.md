@@ -46,8 +46,8 @@ Flatten composite points **cmp** prior estimation/simulation. The following issu
 6. Unflatten **BM1_**  to **BM1** using **key2coord**, with the simulated values
 7. Up-scale **BM1** 
 
-**Conclusions**
+**Conclusions**  
 A large sub-blocked model of a narrow structure was used as reference domain to generate a simulated model and scale-up to match the original parent cells. The impact of the coordinate projection and precision must be understood and is case-specific. GSLIB programs can successfully used to simulate unstructured large grids.
 
-**References**
-[A flexible sequential Gaussian simulation program: USGSIM._Computers & geosciences_,_41_, 208-216](https://www.sciencedirect.com/science/article/abs/pii/S0098300411002755)
+**References**  
+1. [A flexible sequential Gaussian simulation program: USGSIM._Computers & geosciences_,_41_, 208-216](https://www.sciencedirect.com/science/article/abs/pii/S0098300411002755)
