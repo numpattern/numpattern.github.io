@@ -2,7 +2,7 @@
 layout: post
 title: Dealing with large sub-blocked narrow models using GSLIB
 #subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
-tags: [Simulation, GSLIB]
+tags: [Modeling]
 bigimg: /img/20200502_05.PNG
 share-img: /img/20200502_05.PNG
 ---
@@ -13,7 +13,7 @@ Sometimes we deal with sub-blocked models generated with a software that is not 
 - usgsim (Manchuk, J. G., & Deutsch, C. V. (2012)
 - Any programming language
 
-**Task**
+**Task**  
 Use GSLIB to generate a simulated model, and average up to the parent cells of a given irregularly sub-blocked model **BM**. The following issues were encountered:
 - Our software may not handle the grid definition to import an irregular sub-blocked model
 - The orientation of the model (e.g. narrow structure) may not be aligned with a major plane  (XY, YZ, XZ), this results in large size in disk due to a large GSLIB griddef
@@ -27,18 +27,18 @@ Flatten composite points **cmp** prior estimation/simulation. The following issu
 - **BM** can be exported including XYZ coordinates of populated cells (do not consider unpopulated cells). Do not rely on any previous indexing
 - **BM** is coded with the domain
 
-**1. Flatten sub-blocked grid model by aligning to a principal axis**  
-- Regularize the sub-blocked model to **BM1**, using small cell sizes. 
-- Flatten BM1 to BM1_ by projecting the grid cells along one axis (e.g. Y) to its orthogonal plane (e.g. XZ)
-- Create a dictionary **key2coord**  with **key**:( X-Z coordinate ), **value**: lowest  Ymn (or highest Ymx) of grouped X-Z, and use it to map Ymn to all BM1 cells.
-- Flatten BM1_:  Y_projected = Y - Ymn
+1. Flatten sub-blocked grid model by aligning to a principal axis  
+	1.1 Regularize the sub-blocked model to **BM1**, using small cell sizes.  
+	1.2 Flatten BM1 to BM1_ by projecting the grid cells along one axis (e.g. Y) to its orthogonal plane (e.g. XZ)  
+	1.3 Create a dictionary **key2coord**  with **key**:( X-Z coordinate ), **value**: lowest  Ymn (or highest Ymx) of grouped X-Z, and use it to map Ymn to all BM1 cells. 
+	1.4 Flatten BM1_:  Y_projected = Y - Ymn
 
-**2. Project composites using block model coordinates**   
-- Regularize **BM** to **BM2** using smallest cells for higher precision
-- Flatten **BM2** to **BM2_**  by projecting the grid cells along one axis (e.g. Y), to the perpendicular plane (e.g. XZ)
-	- For **BM2**, obtain **key2coord2** with **key**:( X-Z coordinate ), **value**: lowest  Ymn (or highest Ymx) of grouped X-Z
-- Attach the closest XYZ coordinates from **BM2** to the composite points
-- Flatten the composites **cmp** to **cmp_**  by projecting to an axis, using **key2coord2** dictionary: Y_projected = Y-Ymn
+2. Project composites using block model coordinates  
+	2.1 Regularize **BM** to **BM2** using smallest cells for higher precision
+	2.2 Flatten **BM2** to **BM2_**  by projecting the grid cells along one axis (e.g. Y), to the perpendicular plane (e.g. XZ)
+	2.3 For **BM2**, obtain **key2coord2** with **key**:( X-Z coordinate ), **value**: lowest  Ymn (or highest Ymx) of grouped X-Z
+	2.4 Attach the closest XYZ coordinates from **BM2** to the composite points
+	2.5	Flatten the composites **cmp** to **cmp_**  by projecting to an axis, using **key2coord2** dictionary: Y_projected = Y-Ymn
 
 3. Create a GSLIB griddef that matches the **BM1_**
 4. Impose all 1D-idx's (structured GSLIB griddef) to **BM1_**, and generate a keyout file
