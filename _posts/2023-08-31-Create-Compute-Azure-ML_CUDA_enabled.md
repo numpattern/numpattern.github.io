@@ -3,8 +3,8 @@ layout: post
 title: Create a Compute for Azure ML with CUDA enabled
 #subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
 tags: [Azure, CUDA]
-bigimg: /img/20200502_05.PNG
-share-img: /img/20200502_05.PNG
+bigimg: /img/abstract_bg_cuda.png.PNG
+share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
 #### **What is a compute in Azure ML**

@@ -3,8 +3,8 @@ layout: post
 title: Dealing with large sub-blocked vein models using GSLIB
 #subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
 tags: [Modeling]
-bigimg: /img/20200502_05.PNG
-share-img: /img/20200502_05.PNG
+bigimg: /img/abstract_bg_flattening.PNG
+share-img: /img/abstract_bg_flattening.PNG
 ---
 
 Sometimes we deal with sub-blocked models generated with a software that is not available to us, and we have access only to GSLIB. When using GSLIB's programs, we must consider: (1) they use structured unrotated grids, and (2) write to disk. This may not discourage to practitioners as it's fairly possible to simulate using conventional GSLIB routines for real cases without falling in long waits or depleting our storage. Here, I summarize practical steps to deal with large sub-blocked narrow vein models to quickly simulate and up-scale to original parent cells. 
