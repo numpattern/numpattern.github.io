@@ -22,6 +22,7 @@ description: Unconsciouss Graphs
 navbar-links:
   Projects:
     - Extras: "https://numpattern.github.io/extras_doc/"
+    - Resource Modeling: "https://unconsciousgraph.com/resource-modeling-jb/book.html"
   About: 
     - Author: "aboutme"
     - Blog: "index"
