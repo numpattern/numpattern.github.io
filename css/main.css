@@ -466,16 +466,16 @@ footer .theme-by {
 .intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
   padding: 100px 0;
-  color: #FFF;
-  text-shadow: 1px 1px 3px #000;
+  color: #262424ec;
+  text-shadow: 1px 1px 3px #efefef;
 }
 .intro-header .page-heading h1 {
   margin-top: 0;
-  font-size: 35px;
+  font-size: 30px;
 }
 .intro-header .post-heading h1 {
   margin-top: 0;
-  font-size: 35px;
+  font-size: 30px;
 }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
@@ -483,7 +483,7 @@ footer .theme-by {
   line-height: 1.1;
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   margin: 10px 0 0;
 }
 .intro-header .post-heading .post-subheading {
@@ -491,7 +491,7 @@ footer .theme-by {
 }
 .intro-header.big-img .page-heading .page-subheading,
 .intro-header.big-img .post-heading .post-subheading {
-  font-weight: 400;
+  font-weight: 200;
 }
 .intro-header.big-img .page-heading hr {
   box-shadow: 1px 1px 3px #000;

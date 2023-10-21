@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Disclosed Geo-scientific Data from Geological Institutions
+title: Disclosed Geological Data
 #subtitle: From Beginning
 bigimg: /img/bigdataspace.jpg
 tags: [Database, GIS, geopandas, Access]
