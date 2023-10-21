@@ -9,10 +9,6 @@ share-img: /img/abstract_bg_flattening.PNG
 
 Sometimes we deal with sub-blocked models generated with a software that is not available to us, and we have access only to GSLIB. When using GSLIB's programs, we must consider: (1) they use structured unrotated grids, and (2) write to disk. This may not discourage to practitioners as it's fairly possible to simulate using conventional GSLIB routines for real cases without falling in long waits or depleting our storage. Here, I summarize practical steps to deal with large sub-blocked narrow vein models to quickly simulate and up-scale to original parent cells. 
 
-### **Requisites**
-- usgsim (Manchuk, J. G., & Deutsch, C. V. (2012))
-- Any programming language
-
 ### **Task**
 Use GSLIB to generate a simulated model, and average up to the parent cells of a given irregularly sub-blocked model **BM**. Flatten composite points **cmp** prior estimation/simulation. The following issues were encountered:
 - Our software may not handle the grid definition to import an irregular sub-blocked model
@@ -49,4 +45,4 @@ Use GSLIB to generate a simulated model, and average up to the parent cells of a
 A large sub-blocked model of a narrow structure was used as reference domain to generate a simulated model and scale-up to match the original parent cells. The impact of the coordinate projection and precision must be understood and is case-specific. GSLIB programs can successfully used to simulate unstructured large grids.
 
 ### **References**
-1. [A flexible sequential Gaussian simulation program: USGSIM._Computers & geosciences_,_41_, 208-216](https://www.sciencedirect.com/science/article/abs/pii/S0098300411002755)
+1. [A flexible sequential Gaussian simulation program: USGSIM. Computers & geosciences, 41, 208-216](https://www.sciencedirect.com/science/article/abs/pii/S0098300411002755)

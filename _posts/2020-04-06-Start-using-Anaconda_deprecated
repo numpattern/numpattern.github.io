@@ -95,21 +95,3 @@ jupyter notebook
 If you want to kill the kernel (close the Jupyter) type CTRL+C in your keyboard while you are in in your Anaconda prompt.
 
 There are many others functionalities that we will learn on the way but meanwhile, we are ready to get to the next stage.
-
-
-### Notification
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-{: .box-warning}
-**Warning:** This is a warning box.
-
-{: .box-error}
-**Error:** This is an error box.
-
-
-Best Regards,
-
-**_Harold G. Velasquez_**  
-_Geoscientist_

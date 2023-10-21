@@ -109,10 +109,3 @@ Belows as we can see, is the result. We are now able to make SQL queries to our 
 
 
 [Note](https://pbpython.com/pandas_dtypes.html) _Use this link to follow instructions how to deal with non clean database from scratch regarding al dtypes on your dataframe._
-
-Ok, It resulted well. I will be updating this post for other types of Data, as I look for a Dataset that fits with our next analysis. If you have questions regarding this post, feel free to contact me so I can help you. Also, if you have some dataformats you would like to know how to handle, tell me.
-
-Best Regards,
-
-**_Harold G. Velasquez_**  
-_Geoscientist_
