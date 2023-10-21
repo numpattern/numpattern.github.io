@@ -27,10 +27,10 @@ reddit:
   urlTemplate: "https://reddit.com/u/{value}"
   icon: "fab fa-reddit"
 
-#email:
-#  name: "Email me"
-#  urlTemplate: "mailto:{value}"
-#  icon: "fas fa-envelope"
+email:
+  name: "Email me"
+  urlTemplate: "mailto:{value}"
+  icon: "fas fa-envelope"
 
 linkedin:
   name: "LinkedIn"
@@ -72,9 +72,9 @@ telephone:
   urlTemplate: "tel:993906661"
   icon: "fas fa-phone"
 
-#rss:
-#  name: "RSS"
-#  icon: "fas fa-rss"
+rss:
+  name: "RSS"
+  icon: "fas fa-rss"
 
 steam:
   name: "Steam"
