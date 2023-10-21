@@ -345,11 +345,11 @@ footer .theme-by {
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: #f5f1f1;
+  color: #4a4747;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
   font-style: normal;
-  margin: 0 0 10px;
+  margin: 0 0 0px;
 }
 .post-preview .post-entry {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -377,7 +377,7 @@ footer .theme-by {
   width: 192px;
 }
 .post-preview .post-read-more {
-  font-weight: 800;
+  font-weight: 200;
 }
 
 @media only screen and (min-width: 768px) {
