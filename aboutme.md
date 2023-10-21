@@ -5,4 +5,4 @@ subtitle:
 bigimg: /img/per010rz.jpg
 ---
 
-**Harold G. Velasquez M.Sc. (U of Alberta)**  
+Harold G. Velasquez M.Sc. - University of Alberta
