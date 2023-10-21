@@ -3,7 +3,7 @@
 title: Home 
 
 # Short description of your site
-description: Unconsciouss Graphs
+description: Unconsciouss Graph
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -20,7 +20,7 @@ description: Unconsciouss Graphs
 # List of links in the navigation bar
 #https://jekyllrb.com/tutorials/navigation/ does not work
 navbar-links:
-  Projects:
+  Other projects:
     - Extras: "https://numpattern.github.io/extras_doc/"
     - Resource Modeling: "https://unconsciousgraph.com/resource-modeling-jb/book.html"
   About: 
@@ -260,6 +260,8 @@ prose:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+
+paginate_path: "/blog/page:num/
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
