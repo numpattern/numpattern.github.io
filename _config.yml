@@ -15,7 +15,7 @@ description: Unconsciouss Graph
 # baseurl should be an empty string
 #baseurl: ""
 
-paginate_path: "/blog/page:num/
+paginate_path: "/blog/page:num/"
 
 # --- Navigation bar options --- #
 
@@ -172,6 +172,8 @@ timezone: "America/Vancouver"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
+
+
 paginate: 5
 
 kramdown:
