@@ -3,7 +3,7 @@ layout: post
 title: Create a Compute for Azure ML with CUDA enabled
 #subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
 tags: [Azure, CUDA]
-bigimg: /img/abstract_bg_cuda.png.PNG
+bigimg: /img/per010rz.jpg
 share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
@@ -47,7 +47,7 @@ conda list --explicit > spec.txt  #export specifications
 conda create --name myenv --file spec-file.txt 
 ```
 
-#### **Conclusions**  
+
 In this post, I provided the steps to create a compute in azure ML Studio, and perform a basic set up for ML applications enabling CUDA in our environment.  
 
 #### References

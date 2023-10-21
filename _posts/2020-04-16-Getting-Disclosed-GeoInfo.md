@@ -2,7 +2,7 @@
 layout: post
 title: Disclosed Geological Data
 #subtitle: From Beginning
-bigimg: /img/bigdataspace.jpg
+bigimg: /img/per010rz.jpg
 tags: [Database, GIS, geopandas, Access]
 share-img: "https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/bigdataspace.jpg"
 ---

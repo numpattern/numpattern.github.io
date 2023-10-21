@@ -3,7 +3,7 @@ layout: post
 title: Dealing with large sub-blocked vein models using GSLIB
 #subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
 tags: [Modeling]
-bigimg: /img/abstract_bg_flattening.PNG
+bigimg: /img/per010rz.jpg
 share-img: /img/abstract_bg_flattening.PNG
 ---
 
