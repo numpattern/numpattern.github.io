@@ -346,6 +346,7 @@ footer .theme-by {
 .post-preview .post-meta,
 .post-heading .post-meta {
   color: #808080;
+  font-family: Helvetica, sans-serif;
   font-size: 18px;
   font-style: normal;
   margin: 0 0 10px;
