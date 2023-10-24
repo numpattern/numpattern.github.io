@@ -25,11 +25,12 @@ CUDA is a standard feature in all NVIDIA GeForce, Quadro, and Tesla GPUs as wel
 #### **Setting up the environment**  
 To create an environment within our compute, we run some steps in the Terminal. A common encountered issue while setting an environment with CUDA is the incompatibility between torch and torchvision packages; the pair torch=2.0.0+cu118 and torchvision=0.15.1 is our right choice. After the installation of the previous packages, CUDA should be enabled in our environment.  
 
-{% highlight linenos %}
+
+
+{% highlight python linenos %}
 conda create -n myenv python==3.8.10
 pip install cython
-pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 \
-    --extra-index-url https://download.pytorch.org/whl/cu118
+pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118  --extra-index-url https://download.pytorch.org/whl/cu118
 
 conda activate myenv
 import torch
@@ -46,6 +47,7 @@ python -m ipykernel install --user --name my_kernel --display-name "my_kernel_di
 conda list --explicit > spec.txt 
 conda create --name myenv --file spec-file.txt 
 {% endhighlight %}
+
 
 In this post, I provided the steps to create a compute in azure ML Studio, and do a basic set up for ML applications enabling CUDA in our environment.  
 

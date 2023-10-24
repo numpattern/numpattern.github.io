@@ -668,11 +668,21 @@ pre {
   font-size: 12px;
   line-height: 1.2em;
   font-weight: 100;
+
 }
 .highlight pre {
   border: none;
   background: none;
   margin-left: 0px;
+}
+.highlight {
+  overflow-x: auto;
+}
+.highlight ::-webkit-scrollbar {
+  height: 3px;
+}
+.highlight ::-webkit-scrollbar-thumb {
+  background-color: rgb(31, 31, 32);
 }
 .highlight > pre {
   background-image: linear-gradient(
