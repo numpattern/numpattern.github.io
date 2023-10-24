@@ -672,7 +672,7 @@ pre {
 .highlight pre {
   border: none;
   background: none;
-  margin: 0;
+  margin-left: 0px;
 }
 .highlight > pre {
   background-image: linear-gradient(
@@ -686,7 +686,9 @@ pre {
   border-radius: 0.05em;
 }
 .highlight > pre:not([class~="highlight"]) { /* code block with line number */
-  padding: 0;
+  padding-left: 15px;
+  padding-top: 5;
+  padding-bottom: 5;
 }
 .highlight table, .highlight tr, .highlight td { /* to be removed after fixing table styles */
   border: none;

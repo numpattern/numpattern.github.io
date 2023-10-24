@@ -25,7 +25,7 @@ CUDA is a standard feature in all NVIDIA GeForce, Quadro, and Tesla GPUs as wel
 #### **Setting up the environment**  
 To create an environment within our compute, we run some steps in the Terminal. A common encountered issue while setting an environment with CUDA is the incompatibility between torch and torchvision packages; the pair torch=2.0.0+cu118 and torchvision=0.15.1 is our right choice. After the installation of the previous packages, CUDA should be enabled in our environment.  
 
-{% highlight python linenos %}
+{% highlight linenos %}
 conda create -n myenv python==3.8.10
 pip install cython
 pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 \
