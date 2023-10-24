@@ -20,11 +20,10 @@ The are several compute options in Azure ML Studio, the selected one has a reaso
 CUDA is a parallel computing platform and programming model created by NVIDIA used to speed up applications by harnessing the power of GPUs
 
 #### **Do I have CUDA?**
-CUDA is a standard feature in all NVIDIA GeForce, Quadro, and Tesla GPUs as well as NVIDIA GRID solutions, a comprehensive list of products with CUDA are found [here](https://developer.nvidia.com/cuda-gpus). The command torch.cuda.is_available() is a simple way to check if we have access to GPUs in our environment, it returns True if the system has the NVIDIA driver correctly installed.
+CUDA is a standard feature in all NVIDIA GeForce, Quadro, and Tesla GPUs as well as NVIDIA GRID solutions, a comprehensive list of products with CUDA are found [here](https://developer.nvidia.com/cuda-gpus). The command `torch.cuda.is_available()` is a simple way to check if we have access to GPUs in our environment, it returns True if the system has the NVIDIA driver correctly installed.
 
 #### **Setting up the environment**  
-To create an environment within our compute, we run some steps in the Terminal. A common encountered issue while setting an environment with CUDA is the incompatibility between torch and torchvision packages; the pair torch=2.0.0+cu118 and torchvision=0.15.1 is our right choice. After the installation of the previous packages, CUDA should be enabled in our environment.  
-
+To create an environment within our compute, we run some steps in the Terminal. A common encountered issue while setting an environment with CUDA is the incompatibility between torch and torchvision packages; the pair `torch=2.0.0+cu118` and `torchvision=0.15.1` is our choice. After the installation of the previous packages, CUDA should be enabled in our environment.  
 
 
 {% highlight python linenos %}
@@ -48,8 +47,7 @@ conda list --explicit > spec.txt
 conda create --name myenv --file spec-file.txt 
 {% endhighlight %}
 
-
-In this post, I provided the steps to create a compute in azure ML Studio, and do a basic set up for ML applications enabling CUDA in our environment.  
+This post showed how to create a compute in azure ML Studio, and do a basic set up for ML applications enabling CUDA in our environment.  
 
 #### References
 1. [Installing previous versions of pytorch](https://pytorch.org/get-started/previous-versions/)  
