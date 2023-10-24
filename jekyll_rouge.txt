@@ -22,3 +22,7 @@ Rouge is a pure Ruby syntax highligher (<200 langs)
 grep Code blocks main.css
 got here from pyment-hightligher rouge
 Customize code block appearance.
+
+
+
+color: {{ site.link-col }};
