@@ -26,3 +26,9 @@ Customize code block appearance.
 
 
 color: {{ site.link-col }};
+
+Other topic: To add google analytics tag to sphynx doc:
+	https://www.ericholscher.com/blog/2009/apr/5/adding-google-analytics-sphinx-docs/
+
+To add google analytics to jupyrer-book":
+	https://jupyterbook.org/en/stable/advanced/html.html#:~:text=To%20add%20Google%20Analytics%20to,property%20for%20your%20Jupyter%20Book.
