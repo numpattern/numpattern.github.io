@@ -7,17 +7,15 @@ tags: [Database, GIS, geopandas, Access]
 share-img: "https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/bigdataspace.jpg"
 ---
 
-## Getting Data we can work with
-______
 
-There is plenty of geological information online, some of them include:
+There is plenty of geological information online, some of them can be downloaded from:
 
 - [Victoria State Government - Earth Resources publications](http://earthresources.efirst.com.au/product.asp?pID=1016&cID=12)
 - [USGS GeoSpatial Datasets](https://mrdata.usgs.gov/catalog/science.php?thcode=2&term=474)
 
 Usually, this datasets come in a variety of formats such as GIS, binary, text, .dbf, .mdb, .hdf, among others), then we must be familiarized with them to proceed with the analysis.
 
-## Open .dbf files in Python using geopandas
+### Open .dbf files in Python using geopandas
 ______
 
 Now we will see first how to import .dbf files. Note that the dBASE table (.dbf) file is one of the three files required for a valid ESRI Shapefile. One option to import .dbf files is through [geopandas](https://geopandas.org/) that can be installed with `conda install geopandas` . Geopandas may cause conflicting issues in some conda environments, it is advisable to retain in its own environment if you are unsure. Optionally you can run the code snippet below. Geopandas installation requires descartes package, so you may need to install it as well. 
@@ -42,8 +40,7 @@ The column named geometry in geopandas tables stores shapes. WaterLab data did n
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Geopandas_table.PNG){: .center-block :}
 
 
-### Plot shapes and tiles with geopandas
-___
+#### Plot shapes and tiles with geopandas
 
 Geopandas comes with its own example database, the snippet allows to plot geo-referenced geometries.
 
@@ -51,7 +48,7 @@ Geopandas comes with its own example database, the snippet allows to plot geo-re
 import geopandas
 import pandas as pd
 df = geopandas.read_file(geopandas.datasets.get_path('nybb'))
-ax = df.plot(alpha=0.5, edgecolor='k')
+_ = df.plot(alpha=0.5, edgecolor='k')
 ```
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/gdp_plot.png){: .center-block :}
 
@@ -61,7 +58,7 @@ The package contextily retrieves online tile maps that can be embeded in the plo
 ![Contextily](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Contextily.PNG){: .center-block :}
 
 
-## Opening Micrsoft Access Database files (mdb, accdb)
+### Open Micrsoft Access Database files (mdb, accdb)
 ___
 
 First, a connection must be established to access database files. The ODBC (Open Database Connection) is an API to access any database. Further details to set the connection can be found [here](https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-Microsoft-Access). The next code checks the installed ODBC drivers in our computer.
