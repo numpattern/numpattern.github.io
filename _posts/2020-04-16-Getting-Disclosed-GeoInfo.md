@@ -8,17 +8,17 @@ share-img: "https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.gi
 ---
 
 
-There is plenty of geological information online, some of them can be downloaded from:
+Geological information is available online, some can be downloaded from:
 
 - [Victoria State Government - Earth Resources publications](http://earthresources.efirst.com.au/product.asp?pID=1016&cID=12)
 - [USGS GeoSpatial Datasets](https://mrdata.usgs.gov/catalog/science.php?thcode=2&term=474)
 
-Usually, this datasets come in a variety of formats such as GIS, binary, text, .dbf, .mdb, .hdf, among others), then we must be familiarized with them to proceed with the analysis.
+Usually, these datasets come in a variety of formats such as GIS, binary, text, .dbf, .mdb, .hdf, among others. We must be familiarized with them to proceed with the analysis.
 
 ### Open .dbf files in Python using geopandas
 ______
 
-Now we will see first how to import .dbf files. Note that the dBASE table (.dbf) file is one of the three files required for a valid ESRI Shapefile. One option to import .dbf files is through [geopandas](https://geopandas.org/) that can be installed with `conda install geopandas` . Geopandas may cause conflicting issues in some conda environments, it is advisable to retain in its own environment if you are unsure. Optionally you can run the code snippet below. Geopandas installation requires descartes package, so you may need to install it as well. 
+Now we will see first how to import .dbf files. Note that the dBASE table (.dbf) file is one of the three files required for a valid ESRI Shapefile. One option to import .dbf files is through [geopandas](https://geopandas.org/) that can be installed with `conda install geopandas` . Geopandas may cause conflicting issues in some conda environments, it is advisable to retain in its own environment. Optionally you can run the code snippet below. Geopandas installation requires descartes package, so you may need to install it as well. 
 
 ```python
 conda create -n yourenv
@@ -56,7 +56,6 @@ The package contextily retrieves online tile maps that can be embeded in the plo
 
 ![Contextily](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Contextily.PNG){: .center-block :}
 
-
 ### Open Micrsoft Access Database files (mdb, accdb)
 ___
 
@@ -68,7 +67,7 @@ import pyodbc
 
 An empty list means the lack of any compatible Access Database Driver on your machine, despite having Office installed. For that, The Microsoft Access Database Engine 2010 Redistributable can be downloaded from Microsoft webpage, after installationan ODBC driver will be available. Ensure to install the correct architecture compatible for your machine and Python. In my case, it was 64bits for Office and Python. 
 
-Some erros such as Unable to open registry key Temporary (volatile) can be encountered, and torubleshooting can be found [here](https://stackoverflow.com/questions/26244425/general-error-unable-to-open-registry-key-temporary-volatile-from-access). Common mistakes are related to user permissions to the path of the Access file. Relocating the Access Database file to another location such as the working directory may help. Once the correct driver is installed, use the following snippet to establish the connection and perform a SQL query. 
+Some erros such as Unable to open registry key Temporary can be encountered, and troubleshooting can be found [here](https://stackoverflow.com/questions/26244425/general-error-unable-to-open-registry-key-temporary-volatile-from-access). Common mistakes are related to user permissions to the path of the Access file. Relocating the Access Database file to another location such as the working directory may help. Once the correct driver is installed, use the following snippet to establish the connection and perform a SQL query. 
 
 ```python
 import pyodbc
