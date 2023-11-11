@@ -10,23 +10,17 @@ share-img: "https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.gi
 ## Getting Data we can work with
 ______
 
-As we need geological information in all its types and sizes for our further analysis that we will be facing in this blog, it becames important to get involved with different and disclosed online resources in order to download different chunks of information from around the world. Diving into the Internet, I found the following resources I proceed now to list them below:
+There is plenty of geological information online, some of them include:
 
 - [Victoria State Government - Earth Resources publications](http://earthresources.efirst.com.au/product.asp?pID=1016&cID=12)
 - [USGS GeoSpatial Datasets](https://mrdata.usgs.gov/catalog/science.php?thcode=2&term=474)
 
-But these Datasets come in a wide range of Dataformats (e.g GIS Data, Big data, binary and so on), so we ought to be able to handle whichever type of data that exist. 
+Usually, this datasets come in a variety of formats such as GIS, binary, text, .dbf, .mdb, .hdf, among others), then we must be familiarized with them to proceed with the analysis.
 
-I downloaded files from each of the links listed and the datafiles I found was .dbf, .mdb, .txt, .hdf, .csv and so forth. I will continue to add different kind  of formats on the progress and how to handle this data in order to getting further analysis.
-
-## Opening .dbf files into Python using geopandas
+## Open .dbf files in Python using geopandas
 ______
 
-Now we will see first how to import _.dbf_ files. Note that the dBASE table (.dbf) file is one of the three files required for a valid ESRI Shapefile.
-
-At this point I realized that we need to use a library to import this kind of data, we will use geopandas library which you can find [here](https://geopandas.org/). There you will find all the documentation in order to install it. I suggest that you previously you have Anaconda installed and you better use _conda_ instead of _pip_, besides preferably you must create a new empty environment inside your Anaconda.
-
-The next code is a good choice to run inside your Anaconda Prompt, although _conda install geopandas_ worked well for me since beginning (_I had already an empty environment created_)
+Now we will see first how to import .dbf files. Note that the dBASE table (.dbf) file is one of the three files required for a valid ESRI Shapefile. One option to import .dbf files is through [geopandas](https://geopandas.org/) that can be installed with `conda install geopandas` . Geopandas may cause conflicting issues in some conda environments, it is advisable to retain in its own environment if you are unsure. Optionally you can run the code snippet below. Geopandas installation requires descartes package, so you may need to install it as well. 
 
 ```python
 conda create -n yourenv
@@ -35,15 +29,15 @@ conda config --env --add channels conda-forge
 conda config --env --set channel_priority strict
 conda install python=3 geopandas
 ```
-In my case, after installation, I also needed the _descartes_ package. So it may be possible that you will be asked to install it. 
+
+Once geopandas is installed, the WaterLab data is imported as:
 
 ```python
 import geopandas
 df = geopandas.read_file('WaterLab.dbf')
-df.head() #to show the first rows in our geopandas DataFrame
 ```
 
-The geopandas table is different from a regular DataFrame, because it contains the column named _geometry_ where all the shapes are stored. In our case, we did not find data in our geometry object. See image below.
+The column named geometry in geopandas tables stores shapes. WaterLab data did not present content in the geometry column.
 
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Geopandas_table.PNG){: .center-block :}
 
@@ -51,13 +45,13 @@ The geopandas table is different from a regular DataFrame, because it contains t
 ### What else we can you with geopandas
 ___
 
-In your notebook, you can run the following code, this will show you how you can plot a geo-informations or georeferenced shapes. This will be discussed in future posts
+Geopandas comes with its own example database, the snippet below allows to plot geo-referenced geometries.
 
 ```python
 import geopandas
 import pandas as pd
 df = geopandas.read_file(geopandas.datasets.get_path('nybb'))
-ax = df.plot(figsize=(10,10), alpha=0.5, edgecolor='k')
+ax = df.plot(alpha=0.5, edgecolor='k')
 ```
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/gdp_plot.png){: .center-block :}
 
