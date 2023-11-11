@@ -42,7 +42,7 @@ The column named geometry in geopandas tables stores shapes. WaterLab data did n
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Geopandas_table.PNG){: .center-block :}
 
 
-### Plotting shapes and tiles with geopandas
+### Plot shapes and tiles with geopandas
 ___
 
 Geopandas comes with its own example database, the snippet allows to plot geo-referenced geometries.
@@ -56,7 +56,7 @@ ax = df.plot(alpha=0.5, edgecolor='k')
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/gdp_plot.png){: .center-block :}
 
 
-The package contextily retrieves online tile maps that can be embed in the plots. Use the conda-forge channel to install contextily and geopandas, and then `pip install descartes` in a conda environment with python3.7. 
+The package contextily retrieves online tile maps that can be embeded in the plots. Use the conda-forge channel to install contextily and geopandas, and then `pip install descartes` in a conda environment with python3.7. 
 
 ![Contextily](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Contextily.PNG){: .center-block :}
 
@@ -70,29 +70,24 @@ import pyodbc
 [x for x in pyodbc.drivers() if x.startswith('Microsoft Access Driver')]
 ```
 
-I obtained a empty list which meant that I lacked of _Access Database Driver_ on my machine, even when I had the Office installed, I did not have compatible drivers so I had to install them. For that, I googled _Microsoft Access Database Engine 2010_ from the Microsoft homepage. Recall that it is important to know what is the _bit version_ of both your Office (Microsoft Access) and your Python software; they have to be the same I mean compatible. In my case, it was _64bits_ Office and _64bits_ Python. 
+An empty list means the lack of any compatible Access Database Driver on your machine, despite having Office installed. For that, The Microsoft Access Database Engine 2010 Redistributable can be downloaded from Microsoft webpage, after installationan ODBC driver will be available. Ensure to install the correct architecture compatible for your machine and Python. In my case, it was 64bits for Office and Python. 
 
-After a lot of problems trying to figure out why I got the next error _General error Unable to open registry key Temporary (volatile) …” from Access ODBC_ This page saved my life. [Solve Error](https://stackoverflow.com/questions/26244425/general-error-unable-to-open-registry-key-temporary-volatile-from-access). I recommend you read that after continuing, but mentioning one of the common issues... It is preferably to verify user permissions to the path of your Access file, in my case I opted to relocate my Access Database file in the working directory of my _Jupyter Notebook Environment_.
-
-Let's now try the read_sql function from pandas. It is easier than using the old cursor (for Dataframes purpose)
+Common issues such as General error Unable to open registry key Temporary (volatile) …” from Access ODBC_ can be encountered, and some advices are found [here](https://stackoverflow.com/questions/26244425/general-error-unable-to-open-registry-key-temporary-volatile-from-access). Verify user permissions to the path of your Access file, relocating the Access Database file in the working directory may help. The read_sql function from pandas. It is easier than using the old cursor (for Dataframes purpose)
 
 ```python
 import pyodbc
 import pandas as pd
 conn_str = (
-    r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};' #Driver for 64 bits mdb
-    r'DBQ=path\to\your\file\Geochemistry.mdb;' #Database
-    )
+    r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};' #Driver for 64b mdb
+    r'DBQ=path\to\your\file\Geochemistry.mdb;')
 conn = pyodbc.connect(conn_str)
 
 SQL='SELECT * FROM GSITEASSAY'
 df = pd.read_sql(SQL, conn)
-
 conn.close()
 ```
 
-Belows as we can see, is the result. We are now able to make SQL queries to our databases and bring them into python.
-
+Below is the information in the database. 
 ![Dataframe](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/post002_dataframe.PNG){: .center-block :}
 
 
