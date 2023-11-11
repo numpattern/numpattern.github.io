@@ -46,14 +46,13 @@ Geopandas comes with its own example database, the snippet allows to plot geo-re
 
 ```python
 import geopandas
-import pandas as pd
 df = geopandas.read_file(geopandas.datasets.get_path('nybb'))
 _ = df.plot(alpha=0.5, edgecolor='k')
 ```
 ![Result](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/gdp_plot.png){: .center-block :}
 
 
-The package contextily retrieves online tile maps that can be embeded in the plots. Use the conda-forge channel to install contextily and geopandas, and then `pip install descartes` in a conda environment with python3.7. 
+The package contextily retrieves online tile maps that can be embeded in the plots. Use the conda-forge channel to install contextily and geopandas, and then `pip install descartes` in a conda environment with Python 3.7. 
 
 ![Contextily](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/Contextily.PNG){: .center-block :}
 
@@ -69,7 +68,7 @@ import pyodbc
 
 An empty list means the lack of any compatible Access Database Driver on your machine, despite having Office installed. For that, The Microsoft Access Database Engine 2010 Redistributable can be downloaded from Microsoft webpage, after installationan ODBC driver will be available. Ensure to install the correct architecture compatible for your machine and Python. In my case, it was 64bits for Office and Python. 
 
-Common issues such as General error Unable to open registry key Temporary (volatile) …” from Access ODBC_ can be encountered, and some advices are found [here](https://stackoverflow.com/questions/26244425/general-error-unable-to-open-registry-key-temporary-volatile-from-access). Verify user permissions to the path of your Access file, relocating the Access Database file in the working directory may help. The read_sql function from pandas. It is easier than using the old cursor (for Dataframes purpose)
+Some erros such as Unable to open registry key Temporary (volatile) can be encountered, and torubleshooting can be found [here](https://stackoverflow.com/questions/26244425/general-error-unable-to-open-registry-key-temporary-volatile-from-access). Common mistakes are related to user permissions to the path of the Access file. Relocating the Access Database file to another location such as the working directory may help. Once the correct driver is installed, use the following snippet to establish the connection and perform a SQL query. 
 
 ```python
 import pyodbc
@@ -88,4 +87,4 @@ Below is the information in the database.
 ![Dataframe](https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/post002_dataframe.PNG){: .center-block :}
 
 
-[Note](https://pbpython.com/pandas_dtypes.html) _Use this link to follow instructions how to deal with non clean database from scratch regarding al dtypes on your dataframe._
+[.](https://pbpython.com/pandas_dtypes.html)
