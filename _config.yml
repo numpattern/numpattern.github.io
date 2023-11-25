@@ -23,7 +23,7 @@ paginate_path: "/blog/page:num/"
 #https://jekyllrb.com/tutorials/navigation/ does not work
 navbar-links:
   Other projects:
-    - Extras: "https://numpattern.github.io/extras_doc/"
+    - Resourcegeo: "https://numpattern.github.io/resourcegeo_doc/"
     - Resource Modeling: "https://unconsciousgraph.com/resource-modeling-jb/book.html"
     - Blog: "blog/index"
   About: 
