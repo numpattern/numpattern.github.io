@@ -22,7 +22,7 @@ paginate_path: "/blog/page:num/"
 # List of links in the navigation bar
 #https://jekyllrb.com/tutorials/navigation/ does not work
 navbar-links:
-  Other projects:
+  Projects:
     - Resourcegeo: "https://numpattern.github.io/resourcegeo_doc/"
 #    - Resource Modeling: "https://orespace.net/resource-modeling-jb/book.html"
     - Blog: "blog/index"
