@@ -7,9 +7,7 @@ bigimg: /img/per010rz.jpg
 share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
-Exploration projects collect information over the years. The information changes due to incoming data, change of personal, among other factors. Changes in the data must be justified and well documented, it requires a sound database and personal to provide insightful details. A simple case is to understand the impact of new logged intervals between two consecutive years using tabular data. This post refers to these years as prior and posterior. It presents some considerations to compare to year to date files of categorical logs.
-
-Two data tables are compared, the year-to-date prior, and posterior file. The prior is assumed to be YTD-2021 and the posterior is YTD-2022. ID is the column of drillcores ID's. Domain is the categorical column of the interpretations. The header below is the format of the logging table. 
+Exploration projects collect information over the years. The information changes due to incoming data, change of personal, among other factors. Changes in the data must be justified and well documented, it requires a sound database and personal to provide insightful details. A simple case is to understand the impact of new logged intervals between two consecutive years using tabular data. This post refers to these tables as prior and posterior. It presents some considerations to compare to year to date files of categorical logs. The prior is assumed as YTD-2021 and the posterior is YTD-2022. ID is the column of drillcores ID's. Domain is the categorical column of the interpretations. Below is an example of either the prior or posterior logging table. 
 
 | ID | From | To | Domain |
 | :--- | :---- | :--- | :--- |
