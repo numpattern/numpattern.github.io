@@ -24,7 +24,7 @@ paginate_path: "/blog/page:num/"
 navbar-links:
   Other projects:
     - Resourcegeo: "https://numpattern.github.io/resourcegeo_doc/"
-    - Resource Modeling: "https://unconsciousgraph.com/resource-modeling-jb/book.html"
+#    - Resource Modeling: "https://orespace.net/resource-modeling-jb/book.html"
     - Blog: "blog/index"
   About: 
     - Author: "aboutme"
