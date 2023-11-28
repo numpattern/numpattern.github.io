@@ -25,9 +25,9 @@ The next steps prepare the files.
 
 1. Delete leading and trailing blanks in drill core ID's
 2. Use either lower or upper case in the ID columns
-3. Filter out null values of domain column.
+3. Filter out null Domain values in the prior and posterior.
 
-The join clauses in the post are applied on the set of keys  ID, the start (from) and end (to) of the interval. After performing a joining clause, the interpretations from the prior remains in the column Domain_prior, and in Domain_posterior for the posterior interpretations. The steps tag the intervals using the keywords: unchanged, changed and new on a column Tag.
+Here, the join clause uses the set of keys  ID, stard and end of the interval. After the joining, the interpretations from the prior remains in the column Domain_prior, and in Domain_posterior for the posterior interpretations. The steps below tag the intervals with the keywords: unchanged, changed and new on a column Tag.
 
 1. Perform a prior left outer join posterior (table 1), and tag as unchanged to equal interpretations in Domain_prior and Domain_posterior. This accounts for logged intervals in the prior and posterior tables that remain unchanged.
 
