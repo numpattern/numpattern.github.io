@@ -37,7 +37,17 @@ Here, the join clause uses the set of keys  ID, stard and end of the interval. 
 
 4. Concatenate the rows of table 1 and 2 into a batch table with the tagging. Add a drilling year and optionally sample type column to the batch by mapping the ID's.
 
-The tags: unchanged, changed and new summarizes the change of information.  The length variation suffices in some cases, however is not complete. New logging data results from targeting mineralized zones, the justification of drilling and reinterpretation must be consistent to the variation of metal content. Proceed to generate a table by splitting the intervals of the logging interval table and the assays table containing the elements of interest. Apply the next steps to the new split batch file.
+| ID | From | To | Domain | Tag |
+| :--- |:--- | :--- | :--- | :--- |
+| A0010 | 2021 | DH | A | changed |
+
+The tags: unchanged, changed and new summarizes the change of information.  The length variation suffices in some cases, however is not complete. New logging data results from targeting mineralized zones, the justification of drilling and reinterpretation must be consistent to the variation of metal content. Proceed to generate a table by splitting the intervals of the logging interval table and the assays table of the elements of interest. 
+
+| ID | From' | To' | Domain | Element 1 | Element 2 | Tag |
+| :--- |:--- | :--- | :--- | :--- | :--- | :--- |
+| A0010 | 2021 | DH | A | value 1 | value 2 | changed |
+
+Apply the next steps to the new split batch table.
 
 -  (a) Generate the statistics by domain_prior.
 
