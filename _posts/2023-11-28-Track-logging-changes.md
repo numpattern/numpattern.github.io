@@ -12,17 +12,16 @@ Exploration projects collect information over the years. The information changes
 Two data tables are compared, the year-to-date prior, and posterior file.  ID is the column of drillcores ID's, Domain is the categorical column of the interpretations. The header below is the format of the logging table. 
 
 | ID | From |  To | Domain |
-| --- | ---- | --- | --- |
+| :--- | :---- | :--- | :--- |
 
 Additionally, a table with the  drilling year and optionally sample type is required.
 
-```
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-```
+| Number | Next number | Previous number |
+| :------ |:--- | :--- |
+| Five | Six | Four |
+| Ten | Eleven | Nine |
 
+The next steps prepare the files.
 
 1. Delete leading and trailing blanks in drill core ID's
 2. Use either lower or upper case in the ID columns
