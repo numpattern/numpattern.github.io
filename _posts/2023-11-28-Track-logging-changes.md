@@ -9,7 +9,7 @@ share-img: /img/abstract_bg_cuda.png.PNG
 
 Exploration projects collect information over the years. The information changes due to incoming data, change of personal, among other factors. Changes in the data must be justified and well documented, it requires a sound database and personal to provide insightful details. A simple case is to understand the impact of new logged intervals between two consecutive years using tabular data. This post refers to these years as prior and posterior. It presents some considerations to compare to year to date files of categorical logs.
 
-Two data tables are compared, the year-to-date prior, and posterior file.  ID is the column of drillcores ID's. Domain is the categorical column of the interpretations. The header below is the format of the logging table. 
+Two data tables are compared, the year-to-date prior, and posterior file. The prior is assumed to be YTD-2021 and the posterior is YTD-2022. ID is the column of drillcores ID's. Domain is the categorical column of the interpretations. The header below is the format of the logging table. 
 
 | ID | From | To | Domain |
 | :--- | :---- | :--- | :--- |
@@ -37,15 +37,19 @@ Here, the join clause uses the set of keys  ID, stard and end of the interval. 
 
 4. Concatenate the rows of table 1 and 2 into a batch table with the tagging. Add a drilling year and optionally sample type column to the batch by mapping the ID's.
 
-| ID | From | To | Domain | Tag |
-| :--- |:--- | :--- | :--- | :--- |
-| A0010 | 15.4 | 17.8 | A | changed |
+| ID | From | To | Domain_prior | Domain_posterior | Tag | Year |
+| :--- |:--- | :--- | :--- | :--- | :--- |
+| A0010 | 15.4 | 17.8 | B | A | changed | 2018 |
+| A0010 | 17.8 | 20.8 | A | A | unchanged | 2015 |
+| A0010 | 17.8 | 20.8 |   | A | new | 2022 |
+| A0010 | 21.8 | 23.8 | C | B | changed | 2016 |
+| A0010 | 23.8 | 25.8 |  | C | new | 2016 |
 
 The tags: unchanged, changed and new summarizes the change of information.  The length variation suffices in some cases, however is not complete. New logging data results from targeting mineralized zones, the justification of drilling and reinterpretation must be consistent to the variation of metal content. Proceed to generate a table by splitting the intervals of the logging interval table and the assays table of the elements of interest. 
 
-| ID | From' | To' | Domain | Element 1 | Element 2 | Tag |
-| :--- |:--- | :--- | :--- | :--- | :--- | :--- |
-| A0010 | 15.5 | 16.9 | A | value 1 | value 2 | changed |
+| ID | From' | To' | Domain_prior | Domain_posterior | Tag | Year | Element 1 | Element 2 |
+| :--- |:--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| A0010 | 15.5 | 16.9 | B | A | changed | 2018 | value 1 | value 2 |
 
 Apply the next steps to the new split batch table.
 
