@@ -19,7 +19,9 @@ Additionally, a table with the  drilling year and optionally sample type is requ
 
 | ID | Year | Sample Type |
 | :--- |:--- | :--- |
-| A0010 | 2021 | DH |
+| A10 | 2016 | DH |
+| A11 | 2020 | DH |
+| A12 | 2022 | DH |
 
 The next steps prepare the files.
 
@@ -39,17 +41,17 @@ Here, the join clause uses the set of keys  ID, stard and end of the interval. 
 
 | ID | From | To | Domain_prior | Domain_posterior | Tag | Year |
 | :--- |:--- | :--- | :--- | :--- | :--- |
-| A0010 | 15.4 | 17.8 | B | A | changed | 2018 |
-| A0010 | 17.8 | 20.8 | A | A | unchanged | 2015 |
-| A0010 | 17.8 | 20.8 |   | A | new | 2022 |
-| A0010 | 21.8 | 23.8 | C | B | changed | 2016 |
-| A0010 | 23.8 | 25.8 |  | C | new | 2016 |
+| A10 | 15.4 | 17.8 | B | A | changed | 2016 |
+| A10 | 17.8 | 20.8 | A | A | unchanged | 2016 |
+| A11 | 51.8 | 53.8 | C | B | changed | 2020 |
+| A11 | 53.8 | 55.8 |  | C | new | 2020 |
+| A12 | 37.8 | 40.8 |   | A | new | 2022 |
 
 The tags: unchanged, changed and new summarizes the change of information.  The length variation suffices in some cases, however is not complete. New logging data results from targeting mineralized zones, the justification of drilling and reinterpretation must be consistent to the variation of metal content. Proceed to generate a table by splitting the intervals of the logging interval table and the assays table of the elements of interest. 
 
-| ID | From' | To' | Domain_prior | Domain_posterior | Tag | Year | Element 1 | Element 2 |
-| :--- |:--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| A0010 | 15.5 | 16.9 | B | A | changed | 2018 | value 1 | value 2 |
+| ID | From' | To' | Domain_prior | Domain_posterior | Tag | Year | Grade |
+| :--- |:--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| A10 | 15.5 | 16.9 | B | A | changed | 2016 | 0.30 |
 
 Apply the next steps to the new split batch table.
 
