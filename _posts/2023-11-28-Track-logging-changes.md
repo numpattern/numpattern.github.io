@@ -7,13 +7,13 @@ bigimg: /img/per010rz.jpg
 share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
-Exploration projects collect information over the years. The information changes due to incoming data, change of personal, among other factors. Changes in the data must be justified and well documented, it requires a sound database and personal to provide insightful details. A simple case is to understand the impact of new logged intervals between two consecutive years using tabular data. This post refers to these tables as prior and posterior. It presents some considerations to compare to year to date files of categorical logs. The prior is assumed as YTD-2021 and the posterior is YTD-2022. ID is the column of drillcores ID's. Domain is the categorical column of the interpretations. Below is an example of either the prior or posterior logging table. 
+Exploration projects collect information over the years. The information changes due to incoming data, change of personnel, among other factors. Changes in the data must be justified and well documented, it requires a sound database and professionals to provide insightful details. A simple case is to understand the impact of new logged intervals between two consecutive years using tabular data. This post refers to these tables as prior and posterior. It presents some considerations to compare to year-to-date files of categorical logs. The prior is assumed as YTD-2021 and the posterior is YTD-2022. ID is the column of drillcores ID's. Domain is the categorical column of the interpretations. Below is an example of either the prior or posterior logging table. 
 
 | ID | From | To | Domain |
 | :--- | :---- | :--- | :--- |
 | A0010 | 15.40 | 17.80 | A |
 
-Additionally, a table with the  drilling year and optionally sample type is required.
+Additionally, a table with the drilling year and optionally sample type is required.
 
 | ID | Year | Type |
 | :--- |:--- | :--- |
@@ -27,7 +27,7 @@ The next steps prepare the files.
 2. Use either lower or upper case in the ID columns
 3. Filter out null Domain values in the prior and posterior.
 
-Here, the join clause uses the set of keys  ID, stard and end of the interval. After the joining, the interpretations from the prior remains in the column D_prior, and in D_post for the posterior interpretations. The steps below tag the intervals with the keywords: unchanged, changed and new on a column Tag.
+Here, the join clause uses the set of keys  ID, start and end of the interval. After the joining, the interpretation from the prior remains in the column D_prior, and in D_post for the posterior interpretations. The steps below tag the intervals with the keywords: unchanged, changed and new on a column Tag.
 
 1. Perform a prior left outer join posterior (table 1), and tag as unchanged to equal interpretations in D_prior and D_post. This accounts for logged intervals in the prior and posterior tables that remain unchanged.
 
