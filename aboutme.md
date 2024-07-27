@@ -5,4 +5,4 @@ subtitle:
 bigimg: /img/per010rz.jpg
 ---
 
-Harold G. Velasquez M.Sc.(UofA).
+Harold G. Velasquez M.Sc.(UofA). Research Scientist at GeologicAI
