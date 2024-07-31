@@ -1,0 +1,42 @@
+---
+layout: post
+title: Starting in Chemometrics
+#subtitle: 
+bigimg: /img/bigdataspace.jpg
+tags: [Quantitative Analysis, Signal Processing]
+comments: true
+share-img: "https://raw.githubusercontent.com/haroldvelasquez/haroldvelasquez.github.io/master/img/jupyter.jpg"
+---
+
+**Specifications:**
+These are the specifications of my laptop, as you can see not much is needed.
+
+--- | ---
+Item | Details
+--- | ---
+Windows Edition:        | Windows 10 Pro
+Processor:              | Intel(R) Core i5-6200U CPU @ 2.30 GHz 2.40 GHz
+Installed memory (RAM): | 8.00 GB (7.87 GB usable)
+System type:            | 64-bit Operating System, x64 based processor
+
+**Assumptions:**
+- We have succesfully installed Anaconda3 (I recommend  version 3 instead of 2)
+- We wish to work with Jupyter notebooks
+- We are agree to use Conda environments
+
+Jupyter Notebook can be called by means of your  command line interface _Anaconda prompt_ on Windows. To do that type _Anaconda_ on your windows search field, once we are in the prompt, just type _jupyter notebook_ and press Enter, it will call jupyter notebook. We can also initialize the _Anaconda Navigator_ and launch _jupyter notebook_ option while in the _Home_ tab (I prefer to execute tasks since the prompt)
+
+Jupyter Notebooks are a powerful choice to write and iterate on Python code for data analysis, you are able to write lines of code and run them one at a time. 
+
+You can start by knowing your active environment by default which is named _base_ so try the following on your Anaconda prompt:
+
+```python
+#To know the version of your conda
+conda --version
+#To know the default python version installed in your conda enviroment
+python --version
+#To get a list of all environments installed, you could try also just _conda info_ for detailed destription of the current active environment.
+conda info --envs
+```
+
+The packages chemometrics and chemotools are useful to perform basic pre-processing and modeling of signals. 
