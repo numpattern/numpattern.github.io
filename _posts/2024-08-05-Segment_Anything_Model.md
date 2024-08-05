@@ -8,7 +8,10 @@ share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
 
-Below is the information in the database. 
-![Dataframe](https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true){: .center-block :}
-
 <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="drawing" width="200"/>
+
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 1" style="width: 45%;">
+  <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 2" style="width: 45%;">
+</div>
