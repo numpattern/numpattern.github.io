@@ -8,8 +8,6 @@ share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
 
-#<img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="drawing" width="200"/>
-
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; margin-right: 10px;">
