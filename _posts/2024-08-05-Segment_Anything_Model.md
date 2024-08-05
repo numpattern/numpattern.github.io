@@ -13,7 +13,7 @@ influences the mechanical properties that determine the shape and size of indivi
 
 Segment Anything (SAM), Mask R-CNN and DeepLab are segmentation models. Their applicability for rock particle analysis depend on the requirements of the task, flexibility, customization, resource efficiency among others.
 SAM excels in zero-shot scenarios, however it is resource-intensive due to its architecture. The example shows a zero-short result on an image with numerous clasts. The coloured masks are SAM's outputs to partition the image. 
-The metrics of the constituents are obtained from their mask's outlines.  
+
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; margin-right: 10px;">
@@ -27,3 +27,6 @@ The metrics of the constituents are obtained from their mask's outlines.
   </div>
 </div>
 
+
+The metrics of the constituents are obtained from their mask's outlines. These features include solidity, area, extent and eccentricity.
+<img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/rockparticle_04.JPG?raw=true" style="width: 300px;">
