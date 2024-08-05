@@ -29,4 +29,5 @@ SAM excels in zero-shot scenarios, however it is resource-intensive due to its a
 
 
 The metrics of the constituents are obtained from their mask's outlines. These features include solidity, area, extent and eccentricity.
-<img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/rockparticle_04.JPG?raw=true" style="width: 300px;">
+
+<img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/rockparticle_04.JPG?raw=true" style="width: 100%; height: auto;">
