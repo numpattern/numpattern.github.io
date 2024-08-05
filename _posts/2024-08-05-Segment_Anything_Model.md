@@ -11,6 +11,9 @@ share-img: /img/abstract_bg_cuda.png.PNG
 Rock particles results from erosion, blasting, comminution, and others. In all cases, the geometric characteristics of these particles encode information about the process that generated them. The mineralogy
 influences the mechanical properties that determine the shape and size of individual particles. Digital images are first partitioned into its constituents prior analysis. 
 
+Segment Anything (SAM), Mask R-CNN and DeepLab are segmentation models. Their applicability for rock particle analysis depend on the requirements of the task, flexibility, customization, resource efficiency among others.
+SAM excels in zero-shot scenarios, however it is resource-intensive due to its architecture. The example shows numerous clasts. SAM outputs a set of masks that partition the image. 
+
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; margin-right: 10px;">
     <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/rockparticle_01.JPG?raw=true" alt="Image 1" style="width: 220px;">
