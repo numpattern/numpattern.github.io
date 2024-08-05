@@ -15,3 +15,15 @@ share-img: /img/abstract_bg_cuda.png.PNG
   <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 1" style="width: 45%;">
   <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 2" style="width: 45%;">
 </div>
+
+
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center; margin-right: 10px;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 1" style="width: 300px;">
+    <p>Caption for Image 1</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 2" style="width: 300px;">
+    <p>Caption for Image 2</p>
+  </div>
+</div>
