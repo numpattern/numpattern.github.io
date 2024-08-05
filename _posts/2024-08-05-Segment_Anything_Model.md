@@ -27,3 +27,15 @@ share-img: /img/abstract_bg_cuda.png.PNG
     <p>Caption for Image 2</p>
   </div>
 </div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+  <div style="text-align: center; margin: 10px;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 1" style="max-width: 100%; height: auto;">
+  </div>
+  <div style="text-align: center; margin: 10px;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 2" style="max-width: 100%; height: auto;">
+  </div>
+  <div style="text-align: center; margin: 10px;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 3" style="max-width: 100%; height: auto;">
+  </div>
+</div>
