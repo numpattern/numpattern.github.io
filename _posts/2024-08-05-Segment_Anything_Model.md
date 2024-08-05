@@ -8,25 +8,18 @@ share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
 
-
-<img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="drawing" width="200"/>
-
-
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 1" style="width: 45%;">
-  <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 2" style="width: 45%;">
-</div>
+#<img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="drawing" width="200"/>
 
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; margin-right: 10px;">
-    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 1" style="width: 200px;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 1" style="width: 220px;">
   </div>
   <div style="text-align: center;">
-    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 2" style="width: 200px;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 2" style="width: 220px;">
   </div>
   <div style="text-align: center;">
-    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 2" style="width: 200px;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/annotated_pebbles.PNG?raw=true" alt="Image 2" style="width: 220px;">
   </div>
 </div>
 
