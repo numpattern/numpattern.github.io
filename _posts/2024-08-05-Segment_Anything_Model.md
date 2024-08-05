@@ -8,6 +8,8 @@ share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
 
+Rock particles results from erosion, blasting, comminution, and others. In all cases, the geometric characteristics of these particles encode information about the process that generated them. The mineralogy
+influences the mechanical properties that determine the shape and size of individual particles. Digital images are first partitioned into its constituents prior analysis. 
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; margin-right: 10px;">
