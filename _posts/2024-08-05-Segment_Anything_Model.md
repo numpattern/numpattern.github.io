@@ -30,10 +30,10 @@ The required self-descriptve metrics are calculated for the red contours to deri
 </div>
 
 
-The table shows the metrics of the constituents obtained from their mask's outlines. These include solidity, sphericity, convexity, compactness, circularity among others. 
-$$
-solidity = ax^2 + bx + c,
-$$
+The table shows the metrics of the constituents obtained from their mask's outlines. These include solidity, sphericity, convexity, compactness, circularity among others. Solidity measures the density of an object, 
+a circle has a solidity of 1. Sphericity measures the similarity of an object to a sphere, a circle has a value of 1. Convexity measures the similartiy of an object to a convex shape, a convex object has a value of 1. 
+Compactness measures how  tgihtly an object's  area is distributed around its centroid, a circle has a value of 1. Circularity or roundness differ to compactness as it excludes local irregularities by
+considering the convex perimiter.
 
 
 <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/rockparticle_04.JPG?raw=true" style="width: 100%; height: auto;">
