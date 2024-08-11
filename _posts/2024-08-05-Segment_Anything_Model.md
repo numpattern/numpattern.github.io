@@ -8,10 +8,10 @@ share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
 Image analysis extracts feature information to quantify shapes, enumerate object's structures and characterize shape of structures. 
-Rock particles result from erosion, blasting, comminution, and others. The geometric characteristics of these particles encode information about their geneating process. The mineralogy
-influences the mechanical properties and determines the shape and size of individual particles. Digital images are first partitioned into constituents prior analysis. 
+Rock particles result from erosion, blasting, comminution, and others. The geometric characteristics of these particles encode information about their generating process. The mineralogy
+influences mechanical properties and determines the shape and size of individual particles. Digital images are first partitioned into constituents prior analysis. 
 
-The applicability of segmentation models such as Segment Anything, Mask R-CNN, and DeepLab for rock particle analysis depend on the requirements of the task, flexibility, customization, resource efficiency.
+The applicability of segmentation models such as Segment Anything, Mask R-CNN, and DeepLab for rock particle analysis depends on the requirements of the task, flexibility, customization, resource efficiency.
 The example shows a result on an image with numerous clasts. The coloured masks partition the image. The required self-descriptve metrics are calculated for the red contours to derive shape descriptors. 
 
 <div style="display: flex; justify-content: space-between;">
