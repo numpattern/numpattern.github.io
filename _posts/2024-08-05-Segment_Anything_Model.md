@@ -7,7 +7,6 @@ bigimg: /img/per010rz.jpg
 share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
-
 Image analysis extract feature information to quantify shapes, enumerate object's structures and characterize shape of structures. 
 Rock particles result from erosion, blasting, comminution, and others. The geometric characteristics of these particles encode information about their geneating process. The mineralogy
 influences the mechanical properties and determines the shape and size of individual particles. Digital images are first partitioned into constituents prior analysis. 
