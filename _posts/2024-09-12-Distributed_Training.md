@@ -13,7 +13,7 @@ in ML.
 
 The Internet Protocol (IP) addresses are unique labels assigned to each device connected to a network. IPs
  are the rules to govern how data is sent or received across the internet or a local network. IPv4 is the 
- fourth version, IPv6 is newer and not fully adopted. In IPv4, the network ID 192.168.subnetwork.device is denotes a range 
+ fourth version, IPv6 is newer and not fully adopted. In IPv4, the network ID 192.168.subnetwork.device denotes a range 
  of IP addresses for private use within local networks to communicate. Public addresses do not start with 192.168.
  
 After you log into a computer, the code below summarizes the network interfaces. An interface in this context 
@@ -76,3 +76,32 @@ It doesn’t mean that all those IPs are currently connected or active.
 **Reserved IPs:** Some IP addresses might be reserved for specific devices or purposes but are not currently in use  
 **Expired Leases:** In networks using DHCP (Dynamic Host Configuration Protocol), IP addresses are leased for a specific period. If a device disconnects, its lease might expire, but the IP address could still appear in listings until the lease is fully cleared  
 **Static IPs:** Some devices might have static IP addresses assigned, which remain reserved for them even if they are not currently connected  
+
+Below indicates all packets were sent and received successfully, with 0% packet loss, indicating a good connection. (ACTIVE DEVICE)
+{% highlight python linenos %}
+Pinging 192.168.1.195 with 32 bytes of data:
+Reply from 192.168.1.195: bytes=32 time=9ms TTL=128
+Reply from 192.168.1.195: bytes=32 time=2ms TTL=128
+Reply from 192.168.1.195: bytes=32 time=2ms TTL=128
+Reply from 192.168.1.195: bytes=32 time=2ms TTL=128
+
+Ping statistics for 192.168.1.195:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 9ms, Average = 3ms
+{% endhighlight %}
+
+Below indicates you send 4 packets, and you received 4 responses, but the responses were “Destination host unreachable.” This means that while the network path to the destination was reachable (hence no packet loss), the specific device at 192.168.1.13 could not be reached. 
+The “Destination host unreachable” message is coming from another device (192.168.1.5) on the network, indicating that it couldn’t find the host you were trying to ping.
+So, 0% packet loss here means that the network is functioning, but the specific device you’re trying to reach is not available. (LIKELY INACTIVE DEVICE)
+
+{% highlight python linenos %}
+Pinging 192.168.1.13 with 32 bytes of data:
+Reply from 192.168.1.5: Destination host unreachable.
+Reply from 192.168.1.5: Destination host unreachable.
+Reply from 192.168.1.5: Destination host unreachable.
+Reply from 192.168.1.5: Destination host unreachable.
+
+Ping statistics for 192.168.1.13:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
+{% endhighlight %}
