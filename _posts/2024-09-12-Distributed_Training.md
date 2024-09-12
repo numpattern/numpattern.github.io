@@ -34,28 +34,38 @@ import subprocess
 def get_ip_addresses():
     hostname = socket.gethostname()
     local_ip = socket.gethostbyname(hostname)
-    result = subprocess.run(['arp', '-a'], capture_output=True, text=True)
-    
-    ip_list = []
-    for line in result.stdout.split('\n'):
-        ip_list.append(line)
+    result = subprocess.run(['arp', '-a'], capture_output=True, text=True)  
+    ip_list = [line for line in result.stdout.split('\n')]
     
     return ip_list
+
+for ip in get_ip_addresses():
+    print(ip)
 
 ip_addresses = get_ip_addresses()
 for ip in ip_addresses:
     print(ip)
 {% endhighlight %}
 
-The interface is described here with the IP 192.168.1.11 and 0x6 hexadecimal identifier for the network interface. 
-Physical address lists the MAC addresses (Media Access Control from a device) corresponding to IP addresses. Type: indicates the type of ARP entry.
-MAC: Media Access Control, aims to reach the correct device when the data is sent over.
+The interface is described as IP 192.168.1.5 and the hexadecimal 0x6 refers to the network interface. 
+Physical address are the MAC addresses (Media Access Control from a device) that correspond to each IP. Type is the ARP entry.
+MAC: Media Access Control, aims to reach the correct device when the data is sent over. 
+**Dynamic IP:** if you unplug a device with dynamic IP, it might receive a different IP address after reconnecting
+**Static IP:** If you unplug printer and plug it back, it will still have same IP as long as the settings haven’t been changed.
 
 {% highlight python linenos %}
-Interface: 192.168.1.11 --- 0x6
+Interface: 192.168.1.5 --- 0x6
   Internet Address      Physical Address      Type
   192.168.1.1           00-84-1e-76-26-b3     dynamic   
-  192.168.1.2           e8-7c-25-50-b0-bt     dynamic   
+  192.168.2.3           e8-7c-25-50-b0-bt     static   
 {% endhighlight %}  
 
+If two devices are in two different sub-networks, this can limit the communication, as devices on different sub-networks typically require a router to facilitate communication.
+Multiple Network Interfaces: The presence of different hexadecimal identifiers suggests that your device has multiple network interfaces, each with its own IP address. This is common in systems with both wired and wireless connections, or in servers with multiple network cards.
+Run ipconfig to see if the description of the Network Interface says Ethernet (wired) or WIFI (wireless).
 
+
+
+
+
+e.g each printer will have a unique MAC address even if there are from same brand and model.
