@@ -47,9 +47,15 @@ for ip in ip_addresses:
     print(ip)
 {% endhighlight %}
 
-
-
 The interface is described here with the IP 192.168.1.11 and 0x6 hexadecimal identifier for the network interface. 
 Physical address lists the MAC addresses (Media Access Control from a device) corresponding to IP addresses. Type: indicates the type of ARP entry.
-
 MAC: Media Access Control, aims to reach the correct device when the data is sent over.
+
+{% highlight python linenos %}
+Interface: 192.168.1.11 --- 0x6
+  Internet Address      Physical Address      Type
+  192.168.1.1           00-84-1e-76-26-b3     dynamic   
+  192.168.1.2           e8-7c-25-50-b0-bt     dynamic   
+{% endhighlight %}  
+
+
