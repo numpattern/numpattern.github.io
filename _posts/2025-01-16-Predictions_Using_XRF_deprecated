@@ -1,0 +1,14 @@
+---
+layout: post
+title: Prediction Models Using XRF
+#subtitle: An essential part of Resources Evaluation. GSLIB Cell Based Method.
+tags: [XRF, Regressions]
+bigimg: /img/per010rz.jpg
+share-img: /img/abstract_bg_cuda.png.PNG
+---
+
+Regression Models can be built to predict target values based on XRF data. In mining, thousands of meters get scanned. The reference data are the assays obtained from multiple laboratories. The XRF data is subject to a variety of post processing to be in good shape for calibration. The detector determines the resolution in the number of keV channels. There are several factors that affect the resultant XRF data obtained in the collector. 
+
+There is a support difference between the target assay values for a specific interval and the number of XRF shots. The XRF head must be close enough to the surface being hit to minimize the noise in the output signal. A regression model can be built once all previous considerations have been addressed.
+
+The target assays have some limitations. Depending on the assaying technique, the upper and lower detection limits must be considered. 
