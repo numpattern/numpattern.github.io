@@ -12,3 +12,14 @@ Regression Models can be built to predict target values based on XRF data. In mi
 There is a support difference between the target assay values for a specific interval and the number of XRF shots. The XRF head must be close enough to the surface being hit to minimize the noise in the output signal. A regression model can be built once all previous considerations have been addressed.
 
 The target assays have some limitations. Depending on the assaying technique, the upper and lower detection limits must be considered. 
+
+Several techniques can be applied to obtain the results. Linear Regression. Power Models and machine learning techniques. XRF data on rock usually target a support different than the scale of the assays. Depending on the support required for predictions. The assays must be downscaled to XRF scale or the XRF data upscaled to assays scale. 
+
+Is is important to understand the nature of the data. A linear model can be a best fit in some cases, while some others like Power Model ca be better for other cases. For XRF this all relates to what are the peaks selected.
+
+I must clarify that for regression, we must decide if using 1 or many channels is the way to go. xrf data usually has many channels. Best features are selected using different techniques, however this may not be an appealing way to do it, considering that we should know the theoretical channels in advance and possibly every possible park for the artifacts like sum or escape peak for specific elements.
+
+
+Deciding wether a model is best or not is a complex question. Does adding more data help to the model or does it make things worse. A good approach is t add validation metrics. Track the validation metrics such as RMSE, MSE vs adding more training data. If the RMSE does not improve or even get worse then it's time to stop. 
+
+
