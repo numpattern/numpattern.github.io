@@ -22,4 +22,17 @@ I must clarify that for regression, we must decide if using 1 or many channels i
 
 Deciding wether a model is best or not is a complex question. Does adding more data help to the model or does it make things worse. A good approach is t add validation metrics. Track the validation metrics such as RMSE, MSE vs adding more training data. If the RMSE does not improve or even get worse then it's time to stop. 
 
+A common question is when to stop increasing the training data. Plot a learning curve to show the training and validation performance as a function of the training set size. The point where the validation performance curve starts to flatten is the point of diminishing returns. If the increments of data come in chunks: incomes by country or intervals within drillholes, a simple approach is to  
+
+
+## Make Ransac to output specific inlier ratio
+This approach is performance-focused rather than variable focused. There are several techniques to find outliers including: Gaussian Mixture Models, etc.
+
+sklearn.linear_model.RANSACRegressor is used to create a regression model while detecting outliers. I experienced industry people embedding RANSACRegressor into a WHILE conditioned to an admissible inlier:outlier ratio while varying the residual_threshold, and optimizing a performance metric (e.g. R2) outside of the aforementioned WHILE. This practice is dangerous as it does not allow to control the ratio of inliers. RANSAC may seem appealing due to its simplicity to solve two problems at once. However it prevents from understanding the nature of the outliers. Outlier management must be done carefully. If you cannot avoid its use for a reason, you can workaround the randomness of the function and use the residuals to obtain your set of outliers.
+
+ 
+
+RANSAC's primary goal is to achieve a robust fit by minimizing the influence of outliers. It does this by iteratively fitting models to random subsets of the data and identifying inliers based on a residual threshold. It doesn't explicitly focus on trimming outliers based on the nature of the variable. Moreover RANSAC's outlier detection is based on random sampling, which means the outliers can vary between runs, causing variability in the models. RANSAC must be complemented with other methods such as residual analysis or probability plots to obtain insights into the nature of the outliers.
+
+
 
