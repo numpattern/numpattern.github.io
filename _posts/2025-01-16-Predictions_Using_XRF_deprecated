@@ -25,13 +25,12 @@ Deciding wether a model is best or not is a complex question. Does adding more d
 A common question is when to stop increasing the training data. Plot a learning curve to show the training and validation performance as a function of the training set size. The point where the validation performance curve starts to flatten is the point of diminishing returns. If the increments of data come in chunks: incomes by country or intervals within drillholes, a simple approach is to  
 
 
-## Make Ransac to output specific inlier ratio
-Some applications require to fit a best model. Ideally, outliers should be managed before fitting a regression model. If this is not the case, methods such as Gaussian Mixture Models, Ransac, and others treat as outliers to any poorly fitted predictions. This approach is performance-focused rather than to grasping the nature of the variable. This post contains comments on Ransac.
+## Comments on using Ransac for Outlier Detection
+In general, outliers should be managed before fitting a regression model. If this is not the case, methods such as Gaussian Mixture Models, Ransac, and others treat as outliers to any poorly fitted predictions. This performance-focused approach does not grasp the nature of the variable. This post contains comments on Ransac.
 
-sklearn.linear_model.RANSACRegressor allows to create a regression model and detect outliers. It's interesting to see industry professionals to embed RANSACRegressor into a WHILE conditioned to an admissible inlier:outlier ratio while varying the residual_threshold parameter, and optimizing a performance metric (e.g. R2) outside of the aforementioned WHILE. This practice must be avoided as it does not control the ratio of inliers. RANSAC may seem appealing to many due to its convenience. However it prevents users to correctly understand extreme values. Outlier management must be done carefully. If Ransac's use cannot be avoided, you can at least workaround the randomness in Ransac and use the residuals to obtain a target set of outliers. Some even tried to force Ransac to target inlier ratios.
+RANSACRegressor from sklearn allows to create a regression model and detect outliers. Ransac's primary goal is to achieve a robust fit by trimming out data. It iteratively fits models to random subsets of the data and identifies inliers based on a residual threshold. RANSAC's outlier detection relies on random sampling, which means the outliers can vary between runs, causing variability in the models. For specific contexts, RANSAC can be complemented with probability plots for outlier management.
 
-
-RANSAC's primary goal is to achieve a robust fit by trimming out data. It iteratively fits models to random subsets of the data and identifies inliers based on a residual threshold. RANSAC's outlier detection relies on random sampling, which means the outliers can vary between runs, causing variability in the models. For specific contexts, RANSAC can be complemented with probability plots for outlier management.
+It's concerning seeing practitioners to optimize RANSACRegressor to a performance metric varying residual_thresholds. This must be avoided as inlier_ratio will change accordingly. RANSAC might seem appealing for its convenience, however it misguides users to correctly analyze extreme values. Outlier management must be done carefully. If Ransac's use cannot be avoided, workaround the randomness in Ransac and use the residuals to obtain a target set of outliers. Some even tried to force Ransac to target inlier ratios.
 
 
 
