@@ -26,13 +26,14 @@ A common question is when to stop increasing the training data. Plot a learning 
 
 
 ## Make Ransac to output specific inlier ratio
-This approach is performance-focused rather than variable focused. There are several techniques to find outliers including: Gaussian Mixture Models, etc.
+Some applications require to fit a best model. Ideally, outliers should be managed before fitting a regression model. If this is not the case, methods such as Gaussian Mixture Models, Ransac, and others treat as outliers to any poorly fitted predictions. This approach is performance-focused rather than to grasping the nature of the variable. This post contains comments on Ransac.
 
-sklearn.linear_model.RANSACRegressor is used to create a regression model while detecting outliers. I experienced industry people embedding RANSACRegressor into a WHILE conditioned to an admissible inlier:outlier ratio while varying the residual_threshold, and optimizing a performance metric (e.g. R2) outside of the aforementioned WHILE. This practice is dangerous as it does not allow to control the ratio of inliers. RANSAC may seem appealing due to its simplicity to solve two problems at once. However it prevents from understanding the nature of the outliers. Outlier management must be done carefully. If you cannot avoid its use for a reason, you can workaround the randomness of the function and use the residuals to obtain your set of outliers.
+sklearn.linear_model.RANSACRegressor allows to create a regression model and detect outliers. It's interesting to see industry professionals to embed RANSACRegressor into a WHILE conditioned to an admissible inlier:outlier ratio while varying the residual_threshold parameter, and optimizing a performance metric (e.g. R2) outside of the aforementioned WHILE. This practice must be avoided as it does not control the ratio of inliers. RANSAC may seem appealing to many due to its convenience. However it prevents users to correctly understand extreme values. Outlier management must be done carefully. If Ransac's use cannot be avoided, you can at least workaround the randomness in Ransac and use the residuals to obtain a target set of outliers. Some even tried to force Ransac to target inlier ratios.
 
- 
 
-RANSAC's primary goal is to achieve a robust fit by minimizing the influence of outliers. It does this by iteratively fitting models to random subsets of the data and identifying inliers based on a residual threshold. It doesn't explicitly focus on trimming outliers based on the nature of the variable. Moreover RANSAC's outlier detection is based on random sampling, which means the outliers can vary between runs, causing variability in the models. RANSAC must be complemented with other methods such as residual analysis or probability plots to obtain insights into the nature of the outliers.
+RANSAC's primary goal is to achieve a robust fit by trimming out data. It iteratively fits models to random subsets of the data and identifies inliers based on a residual threshold. RANSAC's outlier detection relies on random sampling, which means the outliers can vary between runs, causing variability in the models. For specific contexts, RANSAC can be complemented with probability plots for outlier management.
+
+
 
 
 
