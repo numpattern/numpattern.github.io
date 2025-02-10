@@ -13,3 +13,16 @@ it delays progress.
 There is a prerogative by Geoffrey Hinton is that there must be some biological version of back proprogration in the brain that allows learning.
 
 Back-propagation
+
+This neuran net comprises of one neuron in the input layer and one neuron in the output later. The output activation is the value in the neuron of the input later times a weight. There is no non-linearity or activation function involved. The weight was started randomly as is usual. The pair input value, target value (i,y) is the training set. This example uses (1.5, 0.8). The goal is to update the weight to make the output activation correct. The error in the example is calculated as the square of the difference between the activation output and the target value. Gradient descent moves along the cost function in the direction of the negative of the gradient to minimize error. There is the exploding gradient problem . Bouncing off the wall getting further away from the minimum. A term learning rate with small values prevents the explosion. 
+
+
+<!-- this is comment -->
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center; margin-right: 10px;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/backprop1.png?raw=true" alt="Image 1" style="width: 210px;">
+  </div>
+  <div style="text-align: center; margin-right: 10px;">
+    <img src="https://github.com/numpattern/numpattern.github.io/blob/main/img/backprop2.png?raw=true" alt="Image 2" style="width: 210px;">
+  </div>
+</div>
