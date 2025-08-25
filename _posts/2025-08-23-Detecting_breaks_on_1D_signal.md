@@ -13,6 +13,7 @@ correct analytical approach. Available algorithms are tailored to specific appli
 
 Pruned Exact Linear Time detects changepoints. Specifically shifts in the mean level of a signal. 
 
-<img src="https://raw.githubusercontent.com/numpattern/techexamples/detect_signal_on_shifts/pelt_on_signal.jpg" style="width: 100%; height: auto;">
+<img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_on_signal.jpg
+" style="width: 100%; height: auto;">
 
 However if your data shows thin, sharp triangular peaks—those fleeting, high-intensity blips— PELT might not be your best ally. These aren't level shifts; they're transient, localized anomalies. In such cases, you're better off exploring methods tailored to pinpoint short-lived disruptions rather than sustained changes.
