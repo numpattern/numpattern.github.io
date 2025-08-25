@@ -7,25 +7,28 @@ bigimg: /img/per010rz.jpg
 share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
-Signals aren’t always smooth. They present irregularities such as sudden drops, peaks or subtle shifts that break the pattern. These features mark important transitions wether the data represent financial markets, 
-seismic data, geological scans and others. Detecting of these patterns requires precision and a 
-correct analytical approach. Available algorithms are tailored to specific applications. Among them, change point detection and peak detection stand out. Though different in scale and focus, both aim to uncover hidden structure within the signal. Understanding when and how to apply each method is key to extracting meaningful insights. This post explores how signal irregularities reveal deeper truths and why choosing the right detection strategy can make all the difference.
+Signals aren’t always smooth. They present irregularities such as sudden drops, peaks or subtle shifts that break the pattern. These features mark important transitions wether the data represent financial markets, seismic data, geological scans and others. Detecting of these patterns requires precision and a correct analytical approach. Available algorithms are tailored to specific applications. Among them, change point detection and peak detection stand out. Though different in scale and focus, both aim to uncover hidden structure within the signal. Understanding when and how to apply each method is key to extracting meaningful insights. This post explores how signal irregularities reveal deeper truths and why choosing the right detection strategy can make all the difference.
 
 **Pruned Exact Linear Time (PELT)** detects shifts in the mean level of a signal. It detects changepoints in time series data by minimizing a cost function that balances model fit and complexity. The complexity refers to the number of change points detected. It’s especially effective for identifying shifts in mean or variance. PELT uses dynamic programming with a clever pruning strategy to discard unlikely changepoint candidates, drastically reducing computation time. Unlike brute-force methods, it guarantees an exact solution while scaling linearly with data size under certain conditions. This makes it ideal for large datasets where speed and accuracy are crucial. 
-
 <img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_on_synthetic_signal.jpg" style="width: 100%; height: auto;">
 
 
-**Model complexity —number of change points— impacts total cost** The example illustrates how a penalty term discourages overfitting.
-
-Initial drop: Adding change points improves fit (lower SSE). Minimum point: The optimal balance between fit and complexity. Rising tail: Beyond this, the penalty outweighs SSE reduction, increasing total cost. 
+**Model complexity —number of change points— impacts total cost** The example illustrates how a penalty term discourages overfitting. Initial drop: Adding change points improves fit (lower SSE). Minimum point: The optimal balance between fit and complexity. Rising tail: Beyond this, the penalty outweighs SSE reduction, increasing total cost. 
 This exemplifies the bias–variance trade-off: balancing accuracy with simplicity in model selection.
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_npoints_vs_tcost.png" style="width: 50%; height: auto;">
+</div>
 
-<img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_npoints_vs_tcost.png" style="width: 40%; height: auto;">
-
-
+**Penalty vs Number of Change Points**
+PELT balances model fit and complexity when detecting change points in a noisy signal. By varying the penalty parameter. Total Cost: A combination of sum of squared errors (SSE) within segments and the penalty for adding change points. Number of Change Points (NCP): How many times the algorithm splits the signal. As the penalty increases, the model favors fewer change points, reducing complexity. 
+Steep drop: At low penalties, the model is sensitive and detects many changes—even noise.  
+Elbow point: A sharp bend where the number of change points stabilizes. This often indicates a good penalty value.  
+Flat tail: At high penalties, the model becomes conservative and only detects major shifts.  
 A higher penalty means PELT is more conservative—it avoids adding change points unless the fit improves significantly. A lower penalty makes it more permissive, allowing more change points even for small improvements.
+There's a sweet spot highlighted in green where the trade-off between fit and simplicity is optimal — capturing meaningful changes without overfitting noise. This justify the choice of penalty when applying PELT to real-world data.
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_penalty_vs_tc_ncp.png" style="width: 50%; height: auto;">
+</div>
 
-PELT might not be your best ally for cases with narrow, sharp triangular peaks. These aren't level shifts; they're transient, localized anomalies. In such cases, methods tailed to pinpoint short-lived disruptions rather than sustained changes are the way to go. The image shows PELT stturgling to detect those features. The narrow asymmetric peaks can represent cracks or anomalies.
-
+**Limitations** PELT might not be your best ally for cases with narrow, sharp triangular peaks. These aren't level shifts; they're transient, localized anomalies. In such cases, methods tailed to pinpoint short-lived disruptions rather than sustained changes are the way to go. The image shows PELT stturgling to detect those features. The narrow asymmetric peaks can represent cracks or anomalies.The red dashed lines are the algorithm results, and the blue dashed lines are irregularities not detected by the algorithm. 
 <img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_on_signal.jpg" style="width: 100%; height: auto;">
