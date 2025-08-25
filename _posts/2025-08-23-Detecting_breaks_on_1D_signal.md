@@ -19,13 +19,9 @@ This exemplifies the bias–variance trade-off: balancing accuracy with simplici
   <img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_npoints_vs_tcost.png" style="width: 50%; height: auto;">
 </div>
 
-**Penalty vs Number of Change Points**
-PELT balances model fit and complexity when detecting change points in a noisy signal. By varying the penalty parameter. Total Cost: A combination of sum of squared errors (SSE) within segments and the penalty for adding change points. Number of Change Points (NCP): How many times the algorithm splits the signal. As the penalty increases, the model favors fewer change points, reducing complexity. 
-Steep drop: At low penalties, the model is sensitive and detects many changes—even noise.  
-Elbow point: A sharp bend where the number of change points stabilizes. This often indicates a good penalty value.  
-Flat tail: At high penalties, the model becomes conservative and only detects major shifts.  
-A higher penalty means PELT is more conservative—it avoids adding change points unless the fit improves significantly. A lower penalty makes it more permissive, allowing more change points even for small improvements.
-There's a sweet spot highlighted in green where the trade-off between fit and simplicity is optimal — capturing meaningful changes without overfitting noise. This justify the choice of penalty when applying PELT to real-world data.
+**Penalty vs Number of Change Points.**
+PELT balances model fit and complexity when detecting change points by varying the penalty parameter. Total Cost: A combination of sum of squared errors (SSE) within segments and the penalty for adding change points. Number of Change Points (NCP) are the times the algorithm splits the signal. The image shows some characteristics. The model favors fewer change points as the penalty increases which in turn reduce complexity. The steep drop: the model is sensitive and detects many changes—even noise at low penalties.  
+Elbow point: A sharp bend where the number of change points stabilizes. This often indicates a good penalty value. Flat tail: At high penalties, the model becomes conservative and only detects major shifts. A higher penalty means PELT is more conservative—it avoids adding change points unless the fit improves significantly. A lower penalty makes it more permissive, allowing more change points even for small improvements. The green region is the sweer spot where the trade-off between fit and simplicity is optimal — capturing meaningful changes without overfitting noise. This justifies the choice of penalty when applying PELT to real-world data.
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_penalty_vs_tc_ncp.png" style="width: 50%; height: auto;">
 </div>
