@@ -15,6 +15,15 @@ correct analytical approach. Available algorithms are tailored to specific appli
 
 <img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_on_synthetic_signal.jpg" style="width: 100%; height: auto;">
 
+
+**Model complexity —number of change points— impacts total cost** The example illustrates how a penalty term discourages overfitting.
+
+Initial drop: Adding change points improves fit (lower SSE). Minimum point: The optimal balance between fit and complexity. Rising tail: Beyond this, the penalty outweighs SSE reduction, increasing total cost. 
+This exemplifies the bias–variance trade-off: balancing accuracy with simplicity in model selection.
+
+<img src="https://raw.githubusercontent.com/numpattern/numpattern.github.io/main/img/Signalbreaks_pelt_npoints_vs_tcost.png" style="width: 100%; height: auto;">
+
+
 A higher penalty means PELT is more conservative—it avoids adding change points unless the fit improves significantly. A lower penalty makes it more permissive, allowing more change points even for small improvements.
 
 PELT might not be your best ally for cases with narrow, sharp triangular peaks. These aren't level shifts; they're transient, localized anomalies. In such cases, methods tailed to pinpoint short-lived disruptions rather than sustained changes are the way to go. The image shows PELT stturgling to detect those features. The narrow asymmetric peaks can represent cracks or anomalies.
