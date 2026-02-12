@@ -5,4 +5,4 @@ subtitle:
 bigimg: /img/per010rz.jpg
 ---
 
-Harold G. Velasquez M.Sc.(UofA). Research Scientist at GeologicAI
+Harold Velasquez Sanchez(Geostatistician). M.Sc. in Mining, University of Alberta. Experience: Research Scientist at GeologicAI, Resource Geologist  at SRK Consulting Ca.
