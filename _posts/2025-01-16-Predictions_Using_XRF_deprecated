@@ -7,6 +7,29 @@ bigimg: /img/per010rz.jpg
 share-img: /img/abstract_bg_cuda.png.PNG
 ---
 
+Portable XRF in mineral exploration. Portable XRF in mineral exploration can be applied qualitative or quantitative. Quantitative requires the instrumtent
+to be calibrated and a tailored QA/QC. The validation of the results relies on cross checking with laboratory analisys. Qualitative analysis does not require calibration
+of the instrument. The samples require minimal preparation. It relies on control samples to monitor instrument drift.
+
+Scanning a diamond drill core with pXRF has some considerations. The detector must be moved steadily at a constant rate of scanning to produce acceptable results.
+This is preferred over spot sampling where the pXRF take shots at specific locations in the core. Spot sampling is time impractical and the data tend to be noisier due to small scale heterogeneity in the core.
+Repeated scans are prefered over a single scan to improve precision.  
+The clerance must be minimal, this means that the instrument must be in touch contact to the surface of the core. Unlike laboratory analysis, pXRF measures only the core surfaces, this means that certain
+geometry of mineralization (veins, joints, faults) are not correctly sampled with pXRF on the core surface.
+
+Qualitative approach is adequate to take quick decisions quickly and adjust sampling program in real time, evaluate if this is enough for your need before jumping into quantitative. 
+Quantitative approach is significantly more complex, and the data requires scrutinity. Most likely is not well set to report this values instead of laboratory results.
+Given the geometrical nature of mineralization, it's dificult to get representative data.
+
+BIBLIO
+sampling and analysiss for public reporting ofp ortalble xray fluorescende data under 2012
+
+https://www.youtube.com/watch?v=cKQUM5bpSEM
+
+
+https://www.youtube.com/watch?v=vC9uPwdtduc
+
+
 Regression Models can be built to predict target values based on XRF data. In mining, thousands of meters get scanned. The reference data are the assays obtained from multiple laboratories. The XRF data is subject to a variety of post processing to be in good shape for calibration. The detector determines the resolution in the number of keV channels. There are several factors that affect the resultant XRF data obtained in the collector. 
 
 There is a support difference between the target assay values for a specific interval and the number of XRF shots. The XRF head must be close enough to the surface being hit to minimize the noise in the output signal. A regression model can be built once all previous considerations have been addressed.
