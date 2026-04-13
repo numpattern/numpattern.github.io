@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generalized Additive Models to Understand Geochemical Controls
+title: Generalized Additive Models to Decode Geochemical Controls
 #subtitle: .
 tags: [Regression, GAM]
 bigimg: /img/per010rz.jpg
