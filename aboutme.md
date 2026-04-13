@@ -5,7 +5,7 @@ subtitle:
 bigimg: /img/per010rz.jpg
 ---
 
-We are a technical advisory group dedicated to advancing geoscience, geostatistics, and data‑driven decision‑making in the mining industry. Our work focuses on helping exploration and mining teams understand their deposits more clearly through rigorous modeling, transparent workflows, and modern analytical tools.
+We are a technical advisory group dedicated to advancing geoscience, geostatistics, and informed decision making in the mining industry. Our work focuses on helping exploration and mining teams understand their deposits more clearly through rigorous modeling, transparent workflows, and modern analytical tools.
 
 We combine expertise in resource geology, geostatistical modeling, high‑resolution geochemical analysis, machine learning, and computer vision to bridge traditional geological knowledge with emerging data technologies. This integrated approach allows us to support clients from early‑stage exploration through advanced resource evaluation.
 
