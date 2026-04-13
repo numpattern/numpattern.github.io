@@ -34,7 +34,7 @@ email:
 
 linkedin:
   name: "LinkedIn"
-  urlTemplate: "https://www.linkedin.com/in/ghsv19/"
+  urlTemplate: "https://www.linkedin.com/company/104744771/admin/dashboard/" 
   icon: "fab fa-linkedin"
 
 xing:
