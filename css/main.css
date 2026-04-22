@@ -127,6 +127,11 @@ img {
   color: {{ site.navbar-text-col }};
 }
 
+/* Make room for the top-left avatar so the brand isn't covered */
+.navbar-custom .navbar-header {
+  padding-left: 40px;
+}
+
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
@@ -163,6 +168,10 @@ img {
 
   .navbar-custom.top-nav-short {
     padding: 0;
+  }
+
+  .navbar-custom .navbar-header {
+    padding-left: 60px;
   }
 }
 
