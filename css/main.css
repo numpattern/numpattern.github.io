@@ -178,7 +178,7 @@ img {
 .navbar-custom .avatar-container {
   position: absolute;
   /* Anchor avatar to the top-left corner (with margin) */
-  top: 12px;
+  top: 15px;
   left: 12px;
   width: 16.67px;
   margin-top: 0;
@@ -206,7 +206,7 @@ img {
   .navbar-custom .avatar-container {
     width: 33.33px;
     margin-top: 0;
-    top: 12px;
+    top: 15px;
     left: 12px;
   }
 
