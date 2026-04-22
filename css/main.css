@@ -168,7 +168,8 @@ img {
 
 .navbar-custom .avatar-container {
   position: absolute;
-  left: 50%;
+  /* was 50%; offset moves the circle left of navbar center */
+  left: calc(50% - 72px);
   width: 50px;
   margin-top: -25px;
 }
@@ -195,6 +196,7 @@ img {
   .navbar-custom .avatar-container {
     width: 100px;
     margin-top: -50px;
+    left: calc(50% - 110px);
   }
 
   .navbar-custom .avatar-container .avatar-img-border {
