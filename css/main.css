@@ -168,16 +168,17 @@ img {
 
 .navbar-custom .avatar-container {
   position: absolute;
-  /* was 50%; offset moves the circle left of navbar center */
-  left: calc(50% - 72px);
+  /* Anchor avatar to the top-left corner (with margin) */
+  top: 12px;
+  left: 12px;
   width: 50px;
-  margin-top: -25px;
+  margin-top: 0;
 }
 .navbar-custom .avatar-container .avatar-img-border {
   width: 100%;
   border-radius: 50%;
-  margin-left: -50%;
-  display: inline-block;
+  margin-left: 0;
+  display: block;
   box-shadow: 0 0 8px rgba(0, 0, 0, .8);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .8);
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
@@ -195,8 +196,9 @@ img {
 @media only screen and (min-width: 768px) {
   .navbar-custom .avatar-container {
     width: 100px;
-    margin-top: -50px;
-    left: calc(50% - 110px);
+    margin-top: 0;
+    top: 12px;
+    left: 12px;
   }
 
   .navbar-custom .avatar-container .avatar-img-border {
